@@ -171,10 +171,6 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
     font-weight: 600;
   }
 
-  /* Hide the default title and description shown above the custom homepage */
-  .post-header {
-    display: none;
-  }
 
   /* Tablet layout */
   @media screen and (max-width: 1100px) {
