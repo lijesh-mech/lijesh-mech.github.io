@@ -14,7 +14,7 @@ profile:
     <p>Baton Rouge, Louisiana, USA</p>
 
 selected_papers: false
-social: true
+social: false
 ---
 
 <div class="custom-home">
