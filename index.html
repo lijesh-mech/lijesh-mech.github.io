@@ -5,17 +5,27 @@
 </style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=f0b101217084a90093badfe99ff9a7d1"> <link rel="canonical" href="https://lijesh-mech.github.io/"> <script src="/assets/js/theme.js?v=7af685e2ba20b37fef545c97b8064050"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
     initTheme();
   </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item active"> <a class="nav-link" href="/">About <span class="sr-only">(current)</span> </a> </li> <li class="nav-item active"> <a class="nav-link" href="/">About <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/Research%20Projects/">Research Projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">Publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/Awards%20&amp;%20Honors/">Awards &amp; Honors </a> </li> <li class="nav-item "> <a class="nav-link" href="/Patents/">Patents </a> </li> <li class="nav-item "> <a class="nav-link" href="/books/">Books </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">About</h1> <p class="post-description">Academic website of Dr. Lijesh Koottaparambil</p> </header> <article> <style>
-  .custom-home {
-    display: grid;
-    grid-template-columns: 190px minmax(0, 1fr) 235px;
-    gap: 24px;
-    align-items: start;
-    margin-top: 25px;
+  /* Expand the page width */
+  .post,
+  .post-content,
+  .container,
+  main {
+    max-width: 1500px !important;
+    width: 96% !important;
   }
 
-  /* Left profile section */
+  .custom-home {
+    display: grid;
+    grid-template-columns: 255px minmax(0, 1fr) 300px;
+    gap: 34px;
+    align-items: start;
+    width: 100%;
+    margin: 28px auto 0;
+  }
+
+  /* Left purple profile panel */
   .home-sidebar {
-    min-height: 610px;
+    min-height: 720px;
     background-color: #461d7c;
     border: 1px solid #35145f;
     color: #ffffff;
@@ -25,42 +35,46 @@
   .home-sidebar img {
     display: block;
     width: 100% !important;
-    height: auto !important;
+    height: 285px !important;
     margin: 0;
     object-fit: cover;
+    object-position: top center;
   }
 
   .home-sidebar p {
     margin: 0;
-    padding: 12px 16px 0;
+    padding: 16px 20px 0;
     color: #ffffff;
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 1.35;
   }
 
   .home-sidebar p strong {
+    display: inline-block;
+    margin-right: 4px;
     color: #fdd023;
-    font-size: 22px;
+    font-size: 24px;
   }
 
-  /* Center section */
+  /* Main center content */
   .home-main {
     min-width: 0;
-    padding-top: 3px;
+    padding-top: 2px;
   }
 
   .home-main > h1 {
-    margin-top: 0;
-    margin-bottom: 5px;
-    padding-bottom: 7px;
+    margin: 0 0 6px;
+    padding-bottom: 10px;
     border-bottom: 2px solid #461d7c;
-    font-size: 32px;
-    font-weight: 400;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.2;
   }
 
   .home-main > h1 + p {
-    margin-top: 0;
-    margin-bottom: 28px;
-    font-size: 13px;
+    margin: 0 0 30px;
+    font-size: 15px;
+    line-height: 1.5;
   }
 
   .home-main hr {
@@ -68,26 +82,27 @@
   }
 
   .home-main p {
-    font-size: 14px;
-    line-height: 1.55;
+    font-size: 16px;
+    line-height: 1.65;
+    margin-bottom: 18px;
   }
 
   .home-main h3 {
-    margin-top: 25px;
+    margin-top: 28px;
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 23px;
   }
 
-  /* Professional-profile buttons */
+  /* Profile buttons */
   .home-main h3:last-of-type + p {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 10px;
   }
 
   .home-main h3:last-of-type + p a {
     display: inline-block;
-    padding: 8px 11px;
+    padding: 10px 14px;
     border-radius: 4px;
     background-color: #461d7c;
     color: #ffffff !important;
@@ -99,35 +114,40 @@
     color: #fdd023 !important;
   }
 
-  /* Right news section */
+  /* Right news panel */
   .home-news {
-    padding: 18px;
+    padding: 22px;
     background-color: #f4f4f4;
-    border-top: 5px solid #461d7c;
+    border-top: 6px solid #461d7c;
   }
 
   .home-news h2 {
-    margin-top: 0;
-    margin-bottom: 18px;
-    font-size: 23px;
+    margin: 0 0 20px;
+    font-size: 26px;
   }
 
   .home-news p {
-    margin-bottom: 16px;
-    padding-bottom: 14px;
+    margin-bottom: 18px;
+    padding-bottom: 16px;
     border-bottom: 1px solid #d5d5d5;
-    font-size: 13px;
-    line-height: 1.45;
+    font-size: 14px;
+    line-height: 1.5;
   }
 
   .home-news p strong {
     color: #461d7c;
   }
 
-  /* Tablet layout */
-  @media screen and (max-width: 1000px) {
+  /* Hide only the visible page title area above the custom layout */
+  .post-header > h1,
+  .post-header > .post-description {
+    display: none !important;
+  }
+
+  /* Tablet */
+  @media screen and (max-width: 1150px) {
     .custom-home {
-      grid-template-columns: 190px minmax(0, 1fr);
+      grid-template-columns: 230px minmax(0, 1fr);
     }
 
     .home-news {
@@ -135,32 +155,39 @@
     }
 
     .home-sidebar {
-      min-height: 530px;
+      min-height: 650px;
     }
   }
 
-  /* Mobile layout */
-  @media screen and (max-width: 700px) {
+  /* Mobile */
+  @media screen and (max-width: 760px) {
+    .post,
+    .post-content,
+    .container,
+    main {
+      width: 94% !important;
+    }
+
     .custom-home {
       display: block;
     }
 
     .home-sidebar {
       min-height: auto;
-      margin-bottom: 25px;
-    }
-
-    .home-sidebar img {
-      max-height: 420px;
-      object-position: top;
-    }
-
-    .home-main {
       margin-bottom: 28px;
     }
 
+    .home-sidebar img {
+      height: auto !important;
+      max-height: 430px;
+    }
+
+    .home-main {
+      margin-bottom: 30px;
+    }
+
     .home-main > h1 {
-      font-size: 28px;
+      font-size: 31px;
     }
 
     .home-news {
