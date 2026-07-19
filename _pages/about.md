@@ -1392,26 +1392,26 @@ nav.navbar .navbar-brand,
 
         <a
           class="poster-slide active"
-          href="{{ '/assets/img/news/he_poster.png' | relative_url }}"
+          href="{{ '/assets/img/he_poster.png' | relative_url }}"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Open Entropy-Based Quantification of Hydrogen Embrittlement poster"
         >
           <img
-            src="{{ '/assets/img/news/he_poster.png' | relative_url }}"
+            src="{{ '/assets/img/he_poster.png' | relative_url }}"
             alt="Entropy-Based Quantification of Hydrogen Embrittlement research poster"
           >
         </a>
 
         <a
           class="poster-slide"
-          href="{{ '/assets/img/news/encyclopedia_poster.png' | relative_url }}"
+          href="{{ '/assets/img/encyclopedia_poster.png' | relative_url }}"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Open Failure Threshold Entropy poster"
         >
           <img
-            src="{{ '/assets/img/news/encyclopedia_poster.png' | relative_url }}"
+            src="{{ '/assets/img/encyclopedia_poster.png' | relative_url }}"
             alt="Failure Threshold Entropy research poster"
           >
         </a>
