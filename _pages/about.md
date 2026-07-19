@@ -45,7 +45,7 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
       <h1>Dr. Lijesh Koottaparambil</h1>
 
       <p class="home-position">
-        Research Associate | Center for Rotating Machinery (CeRoM),
+        Research Associate, Center for Rotating Machinery (CeRoM),
         Louisiana State University
       </p>
 
@@ -87,7 +87,33 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
 
     <section class="home-social-links">
 
-      {% include social.html %}
+      <a href="mailto:lijesh@lsu.edu">
+        Email
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/lijesh-koottaparambil-12270b95/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn
+      </a>
+
+      <a
+        href="https://scholar.google.com/citations?user=h7tDdkwAAAAJ"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Google Scholar
+      </a>
+
+      <a
+        href="https://www.researchgate.net/profile/Lijesh-P-2"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        ResearchGate
+      </a>
 
     </section>
 
@@ -123,7 +149,7 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
       class="news-link"
       href="{{ '/awards/' | relative_url }}"
     >
-      View Awards &amp; Honors →
+      View Awards &amp; Honors
     </a>
 
   </aside>
