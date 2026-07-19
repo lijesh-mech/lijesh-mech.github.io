@@ -9,18 +9,17 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
 
 <style>
   :root {
-    --lijesh-purple: #461d7c;
-    --lijesh-purple-dark: #31105e;
-    --lijesh-purple-soft: #f5f1fa;
-    --lijesh-gold: #fdd023;
-    --lijesh-text: #232333;
-    --lijesh-muted: #666779;
-    --lijesh-border: #e2e2e8;
-    --lijesh-card: #ffffff;
-    --lijesh-panel: #fafafd;
+    --profile-purple: #461d7c;
+    --profile-purple-dark: #32105f;
+    --profile-purple-light: #f5f1fa;
+    --profile-text: #242433;
+    --profile-muted: #686879;
+    --profile-border: #e1e1e8;
+    --profile-background: #ffffff;
+    --profile-panel: #fafafd;
   }
 
-  /* Expand the theme content area */
+  /* Expand the page width */
   .post,
   .post-content,
   .container,
@@ -29,13 +28,13 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
     max-width: 1500px !important;
   }
 
-  /* Hide only the default page title and description */
+  /* Hide the default page heading */
   .post-header > h1,
   .post-header > .post-description {
     display: none !important;
   }
 
-  /* Hide the standard theme footer because a custom footer is included below */
+  /* Hide the default footer */
   footer.fixed-bottom,
   footer.sticky-bottom {
     display: none !important;
@@ -44,194 +43,58 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
   .academic-home {
     width: 100%;
     margin: 34px auto 0;
-    color: var(--lijesh-text);
+    color: var(--profile-text);
   }
 
   .academic-grid {
     display: grid;
-    grid-template-columns: 310px minmax(0, 1fr) 330px;
-    gap: 46px;
+    grid-template-columns: 285px minmax(0, 1fr) 325px;
+    gap: 42px;
     align-items: start;
   }
 
   /* =========================================================
-     LEFT PROFILE CARD
+     LEFT PROFILE PHOTO
      ========================================================= */
 
-  .profile-card {
+  .profile-photo-card {
     overflow: hidden;
-    background: var(--lijesh-card);
-    border: 1px solid var(--lijesh-border);
-    border-top: 5px solid var(--lijesh-purple);
+    padding: 14px;
+    background: var(--profile-background);
+    border: 1px solid var(--profile-border);
+    border-top: 5px solid var(--profile-purple);
     border-radius: 10px;
     box-shadow: 0 6px 24px rgba(28, 20, 50, 0.07);
-  }
-
-  .profile-photo-wrap {
-    padding: 16px 16px 0;
   }
 
   .profile-photo {
     display: block;
     width: 100% !important;
-    height: 300px !important;
+    height: auto !important;
     margin: 0;
     border-radius: 7px;
     object-fit: cover;
     object-position: top center;
   }
 
-  .profile-card-body {
-    padding: 18px 20px 22px;
-  }
-
-  .profile-name {
-    margin: 0 0 5px;
-    color: var(--lijesh-purple);
-    font-size: 25px;
-    font-weight: 700;
-    line-height: 1.15;
-  }
-
-  .profile-role {
-    margin: 0 0 3px;
-    color: var(--lijesh-muted);
-    font-size: 14px;
-    font-weight: 600;
-  }
-
-  .profile-affiliation {
-    margin: 0;
-    color: var(--lijesh-muted);
-    font-size: 13px;
-    line-height: 1.5;
-  }
-
-  .profile-divider {
-    height: 1px;
-    margin: 19px 0;
-    background: var(--lijesh-border);
-  }
-
-  .contact-list {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  .contact-item {
-    display: grid;
-    grid-template-columns: 33px minmax(0, 1fr);
-    gap: 11px;
-    align-items: center;
-    padding: 9px 5px;
-    border-radius: 6px;
-    color: var(--lijesh-text) !important;
-    text-decoration: none !important;
-    transition:
-      background-color 0.2s ease,
-      transform 0.2s ease;
-  }
-
-  .contact-item:hover {
-    background: var(--lijesh-purple-soft);
-    transform: translateX(2px);
-  }
-
-  .icon-outline {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 25px;
-    height: 25px;
-    color: var(--lijesh-purple);
-  }
-
-  .icon-outline svg {
-    width: 22px;
-    height: 22px;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 1.8;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-
-  .contact-copy {
-    min-width: 0;
-  }
-
-  .contact-label {
-    display: block;
-    margin-bottom: 1px;
-    color: var(--lijesh-text);
-    font-size: 13px;
-    font-weight: 700;
-  }
-
-  .contact-value {
-    display: block;
-    color: var(--lijesh-muted);
-    font-size: 12px;
-    line-height: 1.4;
-    overflow-wrap: anywhere;
-  }
-
-  .profile-links {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .profile-link {
-    display: grid;
-    grid-template-columns: 30px minmax(0, 1fr) 18px;
-    gap: 10px;
-    align-items: center;
-    padding: 11px 5px;
-    border-bottom: 1px solid var(--lijesh-border);
-    color: var(--lijesh-purple) !important;
-    font-size: 13px;
-    font-weight: 650;
-    text-decoration: none !important;
-    transition:
-      color 0.2s ease,
-      padding-left 0.2s ease;
-  }
-
-  .profile-link:last-child {
-    border-bottom: 0;
-  }
-
-  .profile-link:hover {
-    padding-left: 9px;
-    color: var(--lijesh-purple-dark) !important;
-  }
-
-  .profile-link-arrow {
-    color: var(--lijesh-purple);
-    font-size: 18px;
-    line-height: 1;
-  }
-
   /* =========================================================
-     CENTER BIOGRAPHY
+     CENTER PROFILE CONTENT
      ========================================================= */
 
   .biography-panel {
     min-width: 0;
-    padding-top: 6px;
+    padding-top: 4px;
   }
 
   .main-name {
-  position: relative;
-  margin: 0 0 28px;
-  padding-bottom: 18px;
-  color: var(--lijesh-text);
-  font-size: clamp(32px, 3.2vw, 46px);
-  font-weight: 700;
-  letter-spacing: -0.025em;
-  line-height: 1.1;
-}
+    position: relative;
+    margin: 0 0 25px;
+    padding-bottom: 17px;
+    color: var(--profile-text);
+    font-size: clamp(32px, 3vw, 45px);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.08;
   }
 
   .main-name::after {
@@ -240,137 +103,282 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
     left: 0;
     width: 62px;
     height: 4px;
-    background: var(--lijesh-purple);
+    background: var(--profile-purple);
     border-radius: 999px;
     content: "";
   }
 
-  .position-line {
-    margin: 0 0 34px;
-    color: var(--lijesh-muted);
-    font-size: 16px;
+  /* Position and affiliation */
+
+  .position-block {
+    margin-bottom: 20px;
+  }
+
+  .position-title {
+    margin: 0 0 5px;
+    color: var(--profile-purple);
+    font-size: 18px;
+    font-weight: 750;
+  }
+
+  .position-affiliation {
+    margin: 0;
+    color: var(--profile-muted);
+    font-size: 14px;
     line-height: 1.6;
   }
 
-  .position-highlight {
-    color: var(--lijesh-purple);
-    font-weight: 700;
+  /* Professional appointments */
+
+  .professional-highlights {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(210px, 1fr));
+    gap: 12px;
+    margin: 25px 0 32px;
   }
 
-  .biography-copy {
-    max-width: 850px;
+  .highlight-card {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    min-height: 72px;
+    padding: 13px 15px;
+    background: var(--profile-panel);
+    border: 1px solid var(--profile-border);
+    border-radius: 8px;
   }
 
-  .biography-copy p {
-    margin: 0 0 21px;
-    color: var(--lijesh-text);
-    font-size: 16px;
-    line-height: 1.8;
+  .highlight-card:hover {
+    background: var(--profile-purple-light);
+    border-color: rgba(70, 29, 124, 0.35);
   }
 
-  .biography-copy strong {
-    color: var(--lijesh-purple-dark);
+  .highlight-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 34px;
+    width: 34px;
+    height: 34px;
+    color: var(--profile-purple);
   }
 
-  .research-section {
-    margin-top: 35px;
-    padding-top: 30px;
-    border-top: 1px solid var(--lijesh-border);
+  .highlight-icon svg {
+    width: 26px;
+    height: 26px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .highlight-content {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+  }
+
+  .highlight-content strong {
+    color: var(--profile-text);
+    font-size: 13px;
+    font-weight: 750;
+    line-height: 1.35;
+  }
+
+  .highlight-content span {
+    margin-top: 3px;
+    color: var(--profile-muted);
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  /* Main sections */
+
+  .content-section {
+    margin-top: 30px;
+    padding-top: 28px;
+    border-top: 1px solid var(--profile-border);
   }
 
   .section-heading {
     display: flex;
-    gap: 12px;
+    gap: 11px;
     align-items: center;
-    margin: 0 0 21px;
-    color: var(--lijesh-purple);
-    font-size: 24px;
+    margin: 0 0 19px;
+    color: var(--profile-purple);
+    font-size: 23px;
     font-weight: 700;
   }
 
-  .section-heading .icon-outline {
-    width: 26px;
-    height: 26px;
+  .section-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 27px;
+    width: 27px;
+    height: 27px;
+    color: var(--profile-purple);
   }
+
+  .section-icon svg {
+    width: 23px;
+    height: 23px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  /* Biographical sketch */
+
+  .biography-copy p {
+    margin: 0 0 18px;
+    color: var(--profile-text);
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .biography-copy strong {
+    color: var(--profile-purple-dark);
+  }
+
+  /* Research interests */
 
   .research-chips {
     display: grid;
     grid-template-columns: repeat(3, minmax(165px, 1fr));
-    gap: 12px;
+    gap: 11px;
   }
 
   .research-chip {
     display: flex;
-    gap: 10px;
+    gap: 9px;
     align-items: center;
-    min-height: 47px;
-    padding: 10px 14px;
-    background: var(--lijesh-panel);
-    border: 1px solid var(--lijesh-border);
+    min-height: 48px;
+    padding: 10px 13px;
+    background: var(--profile-panel);
+    border: 1px solid var(--profile-border);
     border-radius: 8px;
-    color: var(--lijesh-text);
+    color: var(--profile-text);
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 650;
     line-height: 1.3;
     transition:
-      border-color 0.2s ease,
       background-color 0.2s ease,
+      border-color 0.2s ease,
       transform 0.2s ease;
   }
 
   .research-chip:hover {
-    background: var(--lijesh-purple-soft);
-    border-color: rgba(70, 29, 124, 0.4);
+    background: var(--profile-purple-light);
+    border-color: rgba(70, 29, 124, 0.38);
     transform: translateY(-2px);
   }
 
-  .research-chip .icon-outline {
-    flex: 0 0 22px;
-    width: 22px;
-    height: 22px;
+  .research-chip .section-icon {
+    flex: 0 0 21px;
+    width: 21px;
+    height: 21px;
   }
 
-  .research-chip .icon-outline svg {
-    width: 19px;
-    height: 19px;
+  .research-chip .section-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Selected publications */
+
+  .selected-publications {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .publication-item {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 14px;
+    padding: 17px 0;
+    border-bottom: 1px solid var(--profile-border);
+  }
+
+  .publication-item:first-child {
+    padding-top: 4px;
+  }
+
+  .publication-number {
+    padding-top: 2px;
+    color: var(--profile-purple);
+    font-size: 13px;
+    font-weight: 750;
+  }
+
+  .publication-content h3 {
+    margin: 0 0 6px;
+    color: var(--profile-text);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.45;
+  }
+
+  .publication-authors {
+    margin: 0 0 4px;
+    color: var(--profile-muted);
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .publication-journal {
+    margin: 0;
+    color: var(--profile-purple);
+    font-size: 12px;
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  .publication-link {
+    display: inline-flex;
+    gap: 7px;
+    align-items: center;
+    margin-top: 18px;
+    color: var(--profile-purple) !important;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none !important;
+  }
+
+  .publication-link:hover {
+    color: var(--profile-purple-dark) !important;
   }
 
   /* =========================================================
-     NEWS PANEL
+     RIGHT NEWS PANEL
      ========================================================= */
 
   .news-card {
     overflow: hidden;
-    padding: 26px 27px;
-    background: var(--lijesh-card);
-    border: 1px solid var(--lijesh-border);
+    padding: 25px 26px;
+    background: var(--profile-background);
+    border: 1px solid var(--profile-border);
     border-radius: 10px;
     box-shadow: 0 6px 24px rgba(28, 20, 50, 0.06);
   }
 
   .news-heading {
     display: flex;
-    gap: 12px;
+    gap: 11px;
     align-items: center;
-    margin: 0 0 25px;
-    color: var(--lijesh-purple);
-    font-size: 24px;
+    margin: 0 0 24px;
+    color: var(--profile-purple);
+    font-size: 23px;
     font-weight: 700;
   }
 
-  .news-heading .icon-outline {
-    width: 27px;
-    height: 27px;
-  }
-
   .news-entry {
-    padding: 0 0 22px;
-    margin-bottom: 22px;
-    border-bottom: 1px solid var(--lijesh-border);
-  }
-
-  .news-entry:last-of-type {
-    margin-bottom: 15px;
+    padding-bottom: 21px;
+    margin-bottom: 21px;
+    border-bottom: 1px solid var(--profile-border);
   }
 
   .news-meta {
@@ -382,54 +390,38 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
   }
 
   .news-year {
-    color: var(--lijesh-purple);
+    color: var(--profile-purple);
     font-size: 14px;
     font-weight: 750;
   }
 
   .news-badge {
     display: inline-flex;
-    gap: 5px;
     align-items: center;
     padding: 5px 9px;
-    background: var(--lijesh-purple-soft);
+    background: var(--profile-purple-light);
     border-radius: 999px;
-    color: var(--lijesh-purple);
+    color: var(--profile-purple);
     font-size: 10px;
     font-weight: 700;
     white-space: nowrap;
   }
 
-  .news-badge .icon-outline {
-    width: 14px;
-    height: 14px;
-  }
-
-  .news-badge .icon-outline svg {
-    width: 13px;
-    height: 13px;
-    stroke-width: 2;
-  }
-
   .news-entry p {
     margin: 0;
-    color: var(--lijesh-text);
+    color: var(--profile-text);
     font-size: 14px;
-    line-height: 1.7;
+    line-height: 1.65;
   }
 
   .news-more {
     display: inline-flex;
-    gap: 8px;
+    gap: 7px;
     align-items: center;
-    color: var(--lijesh-purple) !important;
+    color: var(--profile-purple) !important;
     font-size: 13px;
     font-weight: 700;
     text-decoration: none !important;
-  }
-
-  .news-more:hover {
-    color: var(--lijesh-purple-dark) !important;
   }
 
   /* =========================================================
@@ -441,42 +433,40 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
     grid-template-columns: 1.4fr 1fr 1fr;
     gap: 30px;
     align-items: center;
-    margin-top: 60px;
-    padding: 25px 3%;
-    background: var(--lijesh-panel);
-    border-top: 1px solid var(--lijesh-border);
+    margin-top: 58px;
+    padding: 24px 3%;
+    background: var(--profile-panel);
+    border-top: 1px solid var(--profile-border);
   }
 
   .footer-lsu {
     display: flex;
-    gap: 18px;
+    gap: 17px;
     align-items: center;
   }
 
   .lsu-wordmark {
-    color: var(--lijesh-purple);
-    font-size: 34px;
+    color: var(--profile-purple);
+    font-size: 33px;
     font-weight: 850;
     letter-spacing: -0.07em;
     line-height: 1;
   }
 
-  .footer-affiliation {
-    color: var(--lijesh-muted);
+  .footer-affiliation,
+  .footer-copyright {
+    color: var(--profile-muted);
     font-size: 12px;
     line-height: 1.55;
   }
 
   .footer-copyright {
-    color: var(--lijesh-muted);
-    font-size: 12px;
-    line-height: 1.55;
     text-align: center;
   }
 
   .footer-links {
     display: flex;
-    gap: 12px;
+    gap: 11px;
     align-items: center;
     justify-content: flex-end;
   }
@@ -487,18 +477,15 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
     justify-content: center;
     width: 39px;
     height: 39px;
-    background: var(--lijesh-card);
-    border: 1px solid var(--lijesh-border);
+    background: var(--profile-background);
+    border: 1px solid var(--profile-border);
     border-radius: 50%;
-    color: var(--lijesh-purple) !important;
+    color: var(--profile-purple) !important;
     text-decoration: none !important;
-    transition:
-      background-color 0.2s ease,
-      transform 0.2s ease;
   }
 
   .footer-link:hover {
-    background: var(--lijesh-purple-soft);
+    background: var(--profile-purple-light);
     transform: translateY(-2px);
   }
 
@@ -518,8 +505,8 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
 
   @media screen and (max-width: 1200px) {
     .academic-grid {
-      grid-template-columns: 285px minmax(0, 1fr);
-      gap: 34px;
+      grid-template-columns: 260px minmax(0, 1fr);
+      gap: 32px;
     }
 
     .news-card {
@@ -547,22 +534,18 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
       display: block;
     }
 
-    .profile-card,
+    .profile-photo-card,
     .biography-panel,
     .news-card {
       margin-bottom: 30px;
     }
 
-    .profile-photo {
-      height: auto !important;
-      max-height: 480px;
-    }
-
     .main-name {
       margin-top: 8px;
-      font-size: 39px;
+      font-size: 34px;
     }
 
+    .professional-highlights,
     .research-chips {
       grid-template-columns: 1fr;
     }
@@ -577,57 +560,22 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
       justify-content: center;
     }
   }
-
-  @media screen and (max-width: 420px) {
-    .profile-card-body {
-      padding: 17px;
-    }
-
-    .main-name {
-      font-size: 33px;
-    }
-
-    .position-line,
-    .biography-copy p {
-      font-size: 15px;
-    }
-
-    .news-card {
-      padding: 21px;
-    }
-  }
 </style>
 
-<!-- Reusable inline SVG icon definitions -->
+<!-- Reusable SVG icons -->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   style="position:absolute;width:0;height:0;overflow:hidden"
   aria-hidden="true"
 >
-  <symbol id="icon-mail" viewBox="0 0 24 24">
-    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
-    <path d="m4 7 8 6 8-6"></path>
-  </symbol>
-
-  <symbol id="icon-phone" viewBox="0 0 24 24">
-    <path d="M7 3h3l2 5-2 2a16 16 0 0 0 4 4l2-2 5 2v3a3 3 0 0 1-3 3C10 20 4 14 4 6a3 3 0 0 1 3-3z"></path>
+  <symbol id="icon-book" viewBox="0 0 24 24">
+    <path d="M4 5a3 3 0 0 1 3-2h5v17H7a3 3 0 0 0-3 2z"></path>
+    <path d="M20 5a3 3 0 0 0-3-2h-5v17h5a3 3 0 0 1 3 2z"></path>
   </symbol>
 
   <symbol id="icon-scholar" viewBox="0 0 24 24">
     <path d="m3 9 9-5 9 5-9 5-9-5z"></path>
     <path d="M7 12v5c3 2 7 2 10 0v-5"></path>
-  </symbol>
-
-  <symbol id="icon-linkedin" viewBox="0 0 24 24">
-    <rect x="4" y="9" width="3" height="10"></rect>
-    <circle cx="5.5" cy="5.5" r="1.5"></circle>
-    <path d="M11 19V9h3v2c1-2 6-3 6 3v5h-3v-5c0-2-3-2-3 0v5z"></path>
-  </symbol>
-
-  <symbol id="icon-researchgate" viewBox="0 0 24 24">
-    <circle cx="12" cy="12" r="9"></circle>
-    <path d="M8 17V7h4a3 3 0 0 1 0 6H8"></path>
-    <path d="m12 13 4 4"></path>
   </symbol>
 
   <symbol id="icon-flask" viewBox="0 0 24 24">
@@ -645,8 +593,6 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
     <path d="M7 4v16"></path>
     <path d="M17 4v16"></path>
     <path d="M7 12h10"></path>
-    <circle cx="4" cy="4" r="1"></circle>
-    <circle cx="20" cy="20" r="1"></circle>
   </symbol>
 
   <symbol id="icon-atom" viewBox="0 0 24 24">
@@ -673,25 +619,18 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
   <symbol id="icon-calendar" viewBox="0 0 24 24">
     <rect x="3" y="5" width="18" height="16" rx="2"></rect>
     <path d="M7 3v4M17 3v4M3 10h18"></path>
-    <path d="M8 14h2M12 14h2M16 14h1M8 17h2M12 17h2"></path>
   </symbol>
 
-  <symbol id="icon-book" viewBox="0 0 24 24">
-    <path d="M4 5a3 3 0 0 1 3-2h5v17H7a3 3 0 0 0-3 2z"></path>
-    <path d="M20 5a3 3 0 0 0-3-2h-5v17h5a3 3 0 0 1 3 2z"></path>
+  <symbol id="icon-linkedin" viewBox="0 0 24 24">
+    <rect x="4" y="9" width="3" height="10"></rect>
+    <circle cx="5.5" cy="5.5" r="1.5"></circle>
+    <path d="M11 19V9h3v2c1-2 6-3 6 3v5h-3v-5c0-2-3-2-3 0v5z"></path>
   </symbol>
 
-  <symbol id="icon-patent" viewBox="0 0 24 24">
-    <path d="M9 3h6l4 4v14H5V3z"></path>
-    <path d="M15 3v5h5"></path>
-    <circle cx="12" cy="14" r="3"></circle>
-    <path d="m10 17-1 4 3-2 3 2-1-4"></path>
-  </symbol>
-
-  <symbol id="icon-research" viewBox="0 0 24 24">
-    <circle cx="10" cy="10" r="6"></circle>
-    <path d="m15 15 5 5"></path>
-    <path d="M7 10h6M10 7v6"></path>
+  <symbol id="icon-researchgate" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="9"></circle>
+    <path d="M8 17V7h4a3 3 0 0 1 0 6H8"></path>
+    <path d="m12 13 4 4"></path>
   </symbol>
 </svg>
 
@@ -699,140 +638,109 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
 
   <div class="academic-grid">
 
-    <!-- LEFT PROFILE CARD -->
-    <aside class="profile-card">
+    <!-- LEFT PHOTO -->
+    <aside class="profile-photo-card">
+      <img
+        src="{{ '/assets/img/lijesh_profile.jpg' | relative_url }}"
+        alt="Dr. Lijesh Koottaparambil"
+        class="profile-photo"
+      >
+    </aside>
 
-      <div class="profile-photo-wrap">
-        <img
-          src="{{ '/assets/img/lijesh_profile.jpg' | relative_url }}"
-          alt="Dr. Lijesh Koottaparambil"
-          class="profile-photo"
-        >
+    <!-- CENTER CONTENT -->
+    <main class="biography-panel">
+
+      <!-- NAME -->
+      <h1 class="main-name">Dr. Lijesh Koottaparambil</h1>
+
+      <!-- RESEARCH ASSOCIATE DETAILS -->
+      <div class="position-block">
+        <p class="position-title">Research Associate</p>
+
+        <p class="position-affiliation">
+          Center for Rotating Machinery (CeRoM)<br>
+          Department of Mechanical &amp; Industrial Engineering<br>
+          Louisiana State University, Baton Rouge, Louisiana, USA
+        </p>
       </div>
 
-      <div class="profile-card-body">
+      <!-- ASSOCIATE EDITOR AND FELLOWSHIP -->
+      <div class="professional-highlights">
 
-        <div class="contact-list">
+        <div class="highlight-card">
+          <span class="highlight-icon">
+            <svg aria-hidden="true">
+              <use href="#icon-book"></use>
+            </svg>
+          </span>
 
-          <a class="contact-item" href="mailto:lijesh@lsu.edu">
-            <span class="icon-outline">
-              <svg aria-hidden="true"><use href="#icon-mail"></use></svg>
-            </span>
-            <span class="contact-copy">
-              <span class="contact-label">LSU Email</span>
-              <span class="contact-value">lijesh@lsu.edu</span>
-            </span>
-          </a>
+          <span class="highlight-content">
+            <strong>Associate Editor</strong>
+            <span>ASME Journal of Tribology</span>
+          </span>
+        </div>
 
-          <a class="contact-item" href="mailto:lijesh_mech@yahoo.co.in">
-            <span class="icon-outline">
-              <svg aria-hidden="true"><use href="#icon-mail"></use></svg>
-            </span>
-            <span class="contact-copy">
-              <span class="contact-label">Secondary Email</span>
-              <span class="contact-value">lijesh_mech@yahoo.co.in</span>
-            </span>
-          </a>
+        <div class="highlight-card">
+          <span class="highlight-icon">
+            <svg aria-hidden="true">
+              <use href="#icon-scholar"></use>
+            </svg>
+          </span>
 
-          <a class="contact-item" href="tel:+16465499651">
-            <span class="icon-outline">
-              <svg aria-hidden="true"><use href="#icon-phone"></use></svg>
-            </span>
-            <span class="contact-copy">
-              <span class="contact-label">Phone</span>
-              <span class="contact-value">(646) 549-9651</span>
-            </span>
-          </a>
+          <span class="highlight-content">
+            <strong>Indo-US Postdoctoral Fellow</strong>
+            <span>2018–2020</span>
+          </span>
+        </div>
+
+      </div>
+
+      <!-- BIOGRAPHICAL SKETCH -->
+      <section class="content-section">
+
+        <h2 class="section-heading">
+          <span class="section-icon">
+            <svg aria-hidden="true">
+              <use href="#icon-book"></use>
+            </svg>
+          </span>
+          Biographical Sketch
+        </h2>
+
+        <div class="biography-copy">
+
+          <p>
+            Dr. Lijesh Koottaparambil is a Research Associate at the Center
+            for Rotating Machinery (CeRoM), Louisiana State University. His
+            research focuses on thermodynamics-based degradation assessment,
+            tribology, hydrogen embrittlement, corrosion, molecular dynamics,
+            food-process monitoring, battery diagnostics, and intelligent
+            manufacturing.
+          </p>
+
+          <p>
+            His work develops physics-informed methods and advanced sensing
+            technologies for evaluating material and system degradation,
+            predicting remaining useful life, and monitoring manufacturing
+            process quality. He has authored more than 110 peer-reviewed
+            publications, contributed to multiple U.S. and international
+            patents, and supports the scientific community through editorial
+            leadership, peer review, and interdisciplinary research
+            collaboration.
+          </p>
 
         </div>
 
-        <div class="profile-divider"></div>
+      </section>
 
-        <nav class="profile-links" aria-label="Professional profiles">
-
-          <a
-            class="profile-link"
-            href="https://scholar.google.com/citations?user=h7tDdkwAAAAJ"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span class="icon-outline">
-              <svg aria-hidden="true"><use href="#icon-scholar"></use></svg>
-            </span>
-            <span>Google Scholar</span>
-            <span class="profile-link-arrow">→</span>
-          </a>
-
-          <a
-            class="profile-link"
-            href="https://www.linkedin.com/in/lijesh-koottaparambil-12270b95/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span class="icon-outline">
-              <svg aria-hidden="true"><use href="#icon-linkedin"></use></svg>
-            </span>
-            <span>LinkedIn</span>
-            <span class="profile-link-arrow">→</span>
-          </a>
-
-          <a
-            class="profile-link"
-            href="https://www.researchgate.net/profile/Lijesh-P-2"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span class="icon-outline">
-              <svg aria-hidden="true"><use href="#icon-researchgate"></use></svg>
-            </span>
-            <span>ResearchGate</span>
-            <span class="profile-link-arrow">→</span>
-          </a>
-
-        </nav>
-
-      </div>
-
-    </aside>
-
-    <!-- CENTER BIOGRAPHY -->
-    <main class="biography-panel">
-
-      <h1 class="main-name">Dr. Lijesh Koottaparambil</h1>
-
-      <p class="position-line">
-        <span class="position-highlight">Research Associate</span>
-        | Center for Rotating Machinery (CeRoM), Louisiana State University
-      </p>
-
-      <div class="biography-copy">
-
-        <p>
-          I am <strong>Dr. Lijesh Koottaparambil</strong>, a Research Associate
-          at the Center for Rotating Machinery (CeRoM), Louisiana State
-          University (LSU), USA.
-        </p>
-
-        <p>
-          My research focuses on thermodynamics-based degradation assessment,
-          tribology, hydrogen embrittlement, corrosion, molecular dynamics,
-          food-process monitoring, battery health diagnostics, and AI-enabled
-          intelligent manufacturing.
-        </p>
-
-        <p>
-          My work aims to develop physics-informed methods and advanced sensing
-          technologies for predicting degradation, remaining useful life, and
-          process quality across engineering and manufacturing systems.
-        </p>
-
-      </div>
-
-      <section class="research-section">
+      <!-- RESEARCH INTERESTS -->
+      <section class="content-section">
 
         <h2 class="section-heading">
-          <span class="icon-outline">
-            <svg aria-hidden="true"><use href="#icon-flask"></use></svg>
+          <span class="section-icon">
+            <svg aria-hidden="true">
+              <use href="#icon-flask"></use>
+            </svg>
           </span>
           Research Interests
         </h2>
@@ -840,43 +748,55 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
         <div class="research-chips">
 
           <div class="research-chip">
-            <span class="icon-outline">
-              <svg aria-hidden="true"><use href="#icon-flask"></use></svg>
+            <span class="section-icon">
+              <svg aria-hidden="true">
+                <use href="#icon-flask"></use>
+              </svg>
             </span>
             <span>Degradation Entropy Generation</span>
           </div>
 
           <div class="research-chip">
-            <span class="icon-outline">
-              <svg aria-hidden="true"><use href="#icon-chain"></use></svg>
+            <span class="section-icon">
+              <svg aria-hidden="true">
+                <use href="#icon-chain"></use>
+              </svg>
             </span>
             <span>Tribology</span>
           </div>
 
           <div class="research-chip">
-            <span class="icon-outline">
-              <svg aria-hidden="true"><use href="#icon-hydrogen"></use></svg>
+            <span class="section-icon">
+              <svg aria-hidden="true">
+                <use href="#icon-hydrogen"></use>
+              </svg>
             </span>
             <span>Hydrogen Embrittlement</span>
           </div>
 
           <div class="research-chip">
-            <span class="icon-outline">
-              <svg aria-hidden="true"><use href="#icon-atom"></use></svg>
+            <span class="section-icon">
+              <svg aria-hidden="true">
+                <use href="#icon-atom"></use>
+              </svg>
             </span>
             <span>Molecular Dynamics</span>
           </div>
 
           <div class="research-chip">
-            <span class="icon-outline">
-              <svg aria-hidden="true"><use href="#icon-process"></use></svg>
+            <span class="section-icon">
+              <svg aria-hidden="true">
+                <use href="#icon-process"></use>
+              </svg>
             </span>
             <span>Food Manufacturing</span>
           </div>
 
           <div class="research-chip">
-            <span class="icon-outline">
-              <svg aria-hidden="true"><use href="#icon-battery"></use></svg>
+            <span class="section-icon">
+              <svg aria-hidden="true">
+                <use href="#icon-battery"></use>
+              </svg>
             </span>
             <span>Battery Diagnostics</span>
           </div>
@@ -885,14 +805,90 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
 
       </section>
 
+      <!-- SELECTED PUBLICATIONS -->
+      <section class="content-section">
+
+        <h2 class="section-heading">
+          <span class="section-icon">
+            <svg aria-hidden="true">
+              <use href="#icon-book"></use>
+            </svg>
+          </span>
+          Selected Publications
+        </h2>
+
+        <div class="selected-publications">
+
+          <article class="publication-item">
+            <div class="publication-number">01</div>
+
+            <div class="publication-content">
+              <h3>Insert selected publication title here</h3>
+
+              <p class="publication-authors">
+                Lijesh Koottaparambil and co-authors
+              </p>
+
+              <p class="publication-journal">
+                Journal name, volume, pages, year
+              </p>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <div class="publication-number">02</div>
+
+            <div class="publication-content">
+              <h3>Insert selected publication title here</h3>
+
+              <p class="publication-authors">
+                Lijesh Koottaparambil and co-authors
+              </p>
+
+              <p class="publication-journal">
+                Journal name, volume, pages, year
+              </p>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <div class="publication-number">03</div>
+
+            <div class="publication-content">
+              <h3>Insert selected publication title here</h3>
+
+              <p class="publication-authors">
+                Lijesh Koottaparambil and co-authors
+              </p>
+
+              <p class="publication-journal">
+                Journal name, volume, pages, year
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+        <a
+          class="publication-link"
+          href="{{ '/publications/' | relative_url }}"
+        >
+          View all publications
+          <span aria-hidden="true">→</span>
+        </a>
+
+      </section>
+
     </main>
 
-    <!-- RIGHT NEWS CARD -->
+    <!-- NEWS AND UPDATES -->
     <aside class="news-card">
 
       <h2 class="news-heading">
-        <span class="icon-outline">
-          <svg aria-hidden="true"><use href="#icon-calendar"></use></svg>
+        <span class="section-icon">
+          <svg aria-hidden="true">
+            <use href="#icon-calendar"></use>
+          </svg>
         </span>
         News &amp; Updates
       </h2>
@@ -900,13 +896,9 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
       <article class="news-entry">
         <div class="news-meta">
           <span class="news-year">2026</span>
-          <span class="news-badge">
-            <span class="icon-outline">
-              <svg aria-hidden="true"><use href="#icon-book"></use></svg>
-            </span>
-            Editorial Role
-          </span>
+          <span class="news-badge">Editorial Role</span>
         </div>
+
         <p>
           Appointed Associate Editor of the ASME Journal of Tribology.
         </p>
@@ -915,13 +907,9 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
       <article class="news-entry">
         <div class="news-meta">
           <span class="news-year">2025</span>
-          <span class="news-badge">
-            <span class="icon-outline">
-              <svg aria-hidden="true"><use href="#icon-patent"></use></svg>
-            </span>
-            Patent
-          </span>
+          <span class="news-badge">Patent</span>
         </div>
+
         <p>
           New U.S. patent granted for real-time food-process monitoring.
         </p>
@@ -930,13 +918,9 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
       <article class="news-entry">
         <div class="news-meta">
           <span class="news-year">2025</span>
-          <span class="news-badge">
-            <span class="icon-outline">
-              <svg aria-hidden="true"><use href="#icon-research"></use></svg>
-            </span>
-            Research
-          </span>
+          <span class="news-badge">Research</span>
         </div>
+
         <p>
           Advanced entropy-based approaches for engineering degradation
           assessment.
@@ -957,6 +941,7 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
 
     <div class="footer-lsu">
       <div class="lsu-wordmark">LSU</div>
+
       <div class="footer-affiliation">
         <strong>Center for Rotating Machinery (CeRoM)</strong><br>
         Louisiana State University, Baton Rouge, Louisiana, USA
@@ -977,7 +962,9 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
         rel="noopener noreferrer"
         aria-label="Google Scholar"
       >
-        <svg aria-hidden="true"><use href="#icon-scholar"></use></svg>
+        <svg aria-hidden="true">
+          <use href="#icon-scholar"></use>
+        </svg>
       </a>
 
       <a
@@ -987,7 +974,9 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
         rel="noopener noreferrer"
         aria-label="LinkedIn"
       >
-        <svg aria-hidden="true"><use href="#icon-linkedin"></use></svg>
+        <svg aria-hidden="true">
+          <use href="#icon-linkedin"></use>
+        </svg>
       </a>
 
       <a
@@ -997,7 +986,9 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
         rel="noopener noreferrer"
         aria-label="ResearchGate"
       >
-        <svg aria-hidden="true"><use href="#icon-researchgate"></use></svg>
+        <svg aria-hidden="true">
+          <use href="#icon-researchgate"></use>
+        </svg>
       </a>
 
     </div>
