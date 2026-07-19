@@ -223,14 +223,15 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
   }
 
   .main-name {
-    position: relative;
-    margin: 0 0 31px;
-    padding-bottom: 20px;
-    color: var(--lijesh-text);
-    font-size: clamp(38px, 4vw, 58px);
-    font-weight: 750;
-    letter-spacing: -0.035em;
-    line-height: 1.05;
+  position: relative;
+  margin: 0 0 28px;
+  padding-bottom: 18px;
+  color: var(--lijesh-text);
+  font-size: clamp(32px, 3.2vw, 46px);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
   }
 
   .main-name::after {
@@ -711,19 +712,6 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
 
       <div class="profile-card-body">
 
-        <h2 class="profile-name">
-          Dr. Lijesh<br>Koottaparambil
-        </h2>
-
-        <p class="profile-role">Research Associate</p>
-
-        <p class="profile-affiliation">
-          Center for Rotating Machinery (CeRoM)<br>
-          Louisiana State University, USA
-        </p>
-
-        <div class="profile-divider"></div>
-
         <div class="contact-list">
 
           <a class="contact-item" href="mailto:lijesh@lsu.edu">
@@ -731,7 +719,7 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
               <svg aria-hidden="true"><use href="#icon-mail"></use></svg>
             </span>
             <span class="contact-copy">
-              <span class="contact-label">Email</span>
+              <span class="contact-label">LSU Email</span>
               <span class="contact-value">lijesh@lsu.edu</span>
             </span>
           </a>
