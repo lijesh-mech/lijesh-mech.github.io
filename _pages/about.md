@@ -572,75 +572,177 @@ nav.navbar .navbar-brand,
   }
 
   /* =========================================================
-     RIGHT NEWS PANEL
+     ROTATING RESEARCH HIGHLIGHTS
      ========================================================= */
 
-  .news-card {
+  .poster-card {
     overflow: hidden;
-    padding: 25px 26px;
+    padding: 22px;
     background: var(--profile-background);
     border: 1px solid var(--profile-border);
     border-radius: 10px;
     box-shadow: 0 6px 24px rgba(28, 20, 50, 0.06);
   }
 
-  .news-heading {
+  .poster-card-header {
     display: flex;
     gap: 11px;
-    align-items: center;
-    margin: 0 0 24px;
-    color: var(--profile-purple);
-    font-size: 23px;
-    font-weight: 700;
+    align-items: flex-start;
+    margin-bottom: 18px;
   }
 
-  .news-entry {
-    padding-bottom: 21px;
-    margin-bottom: 21px;
-    border-bottom: 1px solid var(--profile-border);
-  }
-
-  .news-meta {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
-  }
-
-  .news-year {
-    color: var(--profile-purple);
-    font-size: 14px;
-    font-weight: 750;
-  }
-
-  .news-badge {
+  .poster-header-icon {
     display: inline-flex;
     align-items: center;
-    padding: 5px 9px;
-    background: var(--profile-purple-light);
-    border-radius: 999px;
+    justify-content: center;
+    flex: 0 0 27px;
+    width: 27px;
+    height: 27px;
     color: var(--profile-purple);
-    font-size: 10px;
-    font-weight: 700;
-    white-space: nowrap;
   }
 
-  .news-entry p {
+  .poster-header-icon svg {
+    display: block;
+    width: 23px;
+    height: 23px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .poster-card-header h2 {
     margin: 0;
-    color: var(--profile-text);
-    font-size: 14px;
-    line-height: 1.65;
+    color: var(--profile-purple);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
   }
 
-  .news-more {
-    display: inline-flex;
+  .poster-card-header p {
+    margin: 4px 0 0;
+    color: var(--profile-muted);
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .poster-carousel {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    background: #f7f8fb;
+    border: 1px solid var(--profile-border);
+    border-radius: 8px;
+  }
+
+  .poster-slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    opacity: 0;
+    visibility: hidden;
+    text-decoration: none !important;
+    transition:
+      opacity 0.65s ease,
+      visibility 0.65s ease;
+  }
+
+  .poster-slide.active {
+    z-index: 2;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .poster-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .poster-control {
+    position: absolute;
+    top: 50%;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33px;
+    height: 33px;
+    padding: 0;
+    background: rgba(70, 29, 124, 0.84);
+    border: 0;
+    border-radius: 50%;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 17px;
+    line-height: 1;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition:
+      opacity 0.2s ease,
+      background-color 0.2s ease;
+  }
+
+  .poster-carousel:hover .poster-control,
+  .poster-control:focus-visible {
+    opacity: 1;
+  }
+
+  .poster-control:hover {
+    background: var(--profile-purple-dark);
+  }
+
+  .poster-previous {
+    left: 9px;
+  }
+
+  .poster-next {
+    right: 9px;
+  }
+
+  .poster-dots {
+    display: flex;
     gap: 7px;
     align-items: center;
-    color: var(--profile-purple) !important;
-    font-size: 13px;
-    font-weight: 700;
-    text-decoration: none !important;
+    justify-content: center;
+    margin-top: 13px;
+  }
+
+  .poster-dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    background: #d6cce4;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    transition:
+      width 0.2s ease,
+      background-color 0.2s ease;
+  }
+
+  .poster-dot.active {
+    width: 22px;
+    background: var(--profile-purple);
+    border-radius: 999px;
+  }
+
+  .poster-caption {
+    min-height: 38px;
+    margin: 12px 0 0;
+    color: var(--profile-text);
+    font-size: 12px;
+    font-weight: 650;
+    line-height: 1.5;
+    text-align: center;
   }
 
   /* =========================================================
@@ -732,7 +834,7 @@ nav.navbar .navbar-brand,
       gap: 32px;
     }
 
-    .news-card {
+    .poster-card {
       grid-column: 1 / -1;
     }
 
@@ -758,7 +860,7 @@ nav.navbar .navbar-brand,
 
     .profile-card,
     .biography-panel,
-    .news-card {
+    .poster-card {
       margin-bottom: 30px;
     }
 
@@ -991,7 +1093,7 @@ nav.navbar .navbar-brand,
             Dr. Lijesh Koottaparambil is a Research Associate at the Center
             for Rotating Machinery (CeRoM), Louisiana State University. His
             research focuses on thermodynamics-based degradation assessment,
-            tribology, hydrogen embrittlement, corrosion, molecular dynamics,
+            tribology, corrosion, additive manufacturing, hydrogen embrittlement,
             food-process monitoring, battery diagnostics, and intelligent
             manufacturing.
           </p>
@@ -1038,7 +1140,7 @@ nav.navbar .navbar-brand,
                 <path d="M8 15h8"></path>
               </svg>
             </span>
-            <span>Degradation Entropy Generation</span>
+            <span>Coupled Degradation Using Laws of Thermodynamics</span>
           </div>
 
           <div class="research-chip">
@@ -1054,24 +1156,37 @@ nav.navbar .navbar-brand,
           <div class="research-chip">
             <span class="research-chip-icon" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M7 3v5"></path>
+                <path d="M17 3v5"></path>
+                <path d="M5 8h14"></path>
+                <path d="M6 8v11h12V8"></path>
+                <path d="M9 12c1.2-1.2 2.1-1.2 3 0s1.8 1.2 3 0"></path>
+                <path d="M9 16c1.2-1.2 2.1-1.2 3 0s1.8 1.2 3 0"></path>
+              </svg>
+            </span>
+            <span>Corrosion</span>
+          </div>
+
+          <div class="research-chip">
+            <span class="research-chip-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="m12 3 8 4-8 4-8-4 8-4z"></path>
+                <path d="m4 12 8 4 8-4"></path>
+                <path d="m4 17 8 4 8-4"></path>
+              </svg>
+            </span>
+            <span>Additive Manufacturing</span>
+          </div>
+
+          <div class="research-chip">
+            <span class="research-chip-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path d="M7 4v16"></path>
                 <path d="M17 4v16"></path>
                 <path d="M7 12h10"></path>
               </svg>
             </span>
             <span>Hydrogen Embrittlement</span>
-          </div>
-
-          <div class="research-chip">
-            <span class="research-chip-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="2"></circle>
-                <ellipse cx="12" cy="12" rx="10" ry="4"></ellipse>
-                <ellipse cx="12" cy="12" rx="4" ry="10" transform="rotate(45 12 12)"></ellipse>
-                <ellipse cx="12" cy="12" rx="4" ry="10" transform="rotate(-45 12 12)"></ellipse>
-              </svg>
-            </span>
-            <span>Molecular Dynamics</span>
           </div>
 
           <div class="research-chip">
@@ -1250,57 +1365,100 @@ nav.navbar .navbar-brand,
 
     </section>
 
-    <!-- NEWS AND UPDATES -->
-    <aside class="news-card">
+    <!-- ROTATING RESEARCH HIGHLIGHTS -->
+    <aside class="poster-card">
 
-      <h2 class="news-heading">
+      <div class="poster-card-header">
 
-        <span class="section-icon" aria-hidden="true">
+        <span class="poster-header-icon" aria-hidden="true">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <rect x="3" y="5" width="18" height="16" rx="2"></rect>
             <path d="M7 3v4M17 3v4M3 10h18"></path>
           </svg>
         </span>
 
-        News &amp; Updates
-
-      </h2>
-
-      <article class="news-entry">
-        <div class="news-meta">
-          <span class="news-year">2026</span>
-          <span class="news-badge">Editorial Role</span>
+        <div>
+          <h2>Research Highlights</h2>
+          <p>Selected research posters and recent work</p>
         </div>
-        <p>
-          Appointed Associate Editor of the ASME Journal of Tribology.
-        </p>
-      </article>
 
-      <article class="news-entry">
-        <div class="news-meta">
-          <span class="news-year">2025</span>
-          <span class="news-badge">Patent</span>
-        </div>
-        <p>
-          New U.S. patent granted for real-time food-process monitoring.
-        </p>
-      </article>
+      </div>
 
-      <article class="news-entry">
-        <div class="news-meta">
-          <span class="news-year">2025</span>
-          <span class="news-badge">Research</span>
-        </div>
-        <p>
-          Advanced entropy-based approaches for engineering degradation
-          assessment.
-        </p>
-      </article>
+      <div
+        class="poster-carousel"
+        id="poster-carousel"
+        aria-label="Rotating research posters"
+      >
 
-      <a class="news-more" href="{{ '/awards/' | relative_url }}">
-        View all updates
-        <span aria-hidden="true">→</span>
-      </a>
+        <a
+          class="poster-slide active"
+          href="{{ '/assets/img/news/he_poster.png' | relative_url }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open Entropy-Based Quantification of Hydrogen Embrittlement poster"
+        >
+          <img
+            src="{{ '/assets/img/news/he_poster.png' | relative_url }}"
+            alt="Entropy-Based Quantification of Hydrogen Embrittlement research poster"
+          >
+        </a>
+
+        <a
+          class="poster-slide"
+          href="{{ '/assets/img/news/encyclopedia_poster.png' | relative_url }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open Failure Threshold Entropy poster"
+        >
+          <img
+            src="{{ '/assets/img/news/encyclopedia_poster.png' | relative_url }}"
+            alt="Failure Threshold Entropy research poster"
+          >
+        </a>
+
+        <!--
+          To add another poster later, upload it to assets/img/news/
+          and duplicate one poster-slide block. Also add a matching
+          poster-dot button and caption in the JavaScript array below.
+        -->
+
+        <button
+          class="poster-control poster-previous"
+          type="button"
+          aria-label="Show previous poster"
+        >
+          &#10094;
+        </button>
+
+        <button
+          class="poster-control poster-next"
+          type="button"
+          aria-label="Show next poster"
+        >
+          &#10095;
+        </button>
+
+      </div>
+
+      <div class="poster-dots" aria-label="Select research poster">
+
+        <button
+          class="poster-dot active"
+          type="button"
+          aria-label="Show poster 1"
+        ></button>
+
+        <button
+          class="poster-dot"
+          type="button"
+          aria-label="Show poster 2"
+        ></button>
+
+      </div>
+
+      <p class="poster-caption" id="poster-caption">
+        Entropy-Based Quantification of Hydrogen Embrittlement
+      </p>
 
     </aside>
 
@@ -1367,3 +1525,104 @@ nav.navbar .navbar-brand,
   </footer>
 
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.getElementById("poster-carousel");
+
+    if (!carousel) {
+      return;
+    }
+
+    const slides = Array.from(carousel.querySelectorAll(".poster-slide"));
+    const dots = Array.from(document.querySelectorAll(".poster-dot"));
+    const previousButton = carousel.querySelector(".poster-previous");
+    const nextButton = carousel.querySelector(".poster-next");
+    const caption = document.getElementById("poster-caption");
+
+    const captions = [
+      "Entropy-Based Quantification of Hydrogen Embrittlement",
+      "Failure Threshold Entropy: A Universal Thermodynamic Framework for Predicting Wear"
+    ];
+
+    let currentIndex = 0;
+    let intervalId = null;
+    const rotationTime = 3000;
+
+    function showSlide(index) {
+      currentIndex = (index + slides.length) % slides.length;
+
+      slides.forEach(function (slide, slideIndex) {
+        const isActive = slideIndex === currentIndex;
+        slide.classList.toggle("active", isActive);
+        slide.setAttribute("aria-hidden", String(!isActive));
+      });
+
+      dots.forEach(function (dot, dotIndex) {
+        dot.classList.toggle("active", dotIndex === currentIndex);
+        dot.setAttribute("aria-current", dotIndex === currentIndex ? "true" : "false");
+      });
+
+      if (caption && captions[currentIndex]) {
+        caption.textContent = captions[currentIndex];
+      }
+    }
+
+    function showNextSlide() {
+      showSlide(currentIndex + 1);
+    }
+
+    function showPreviousSlide() {
+      showSlide(currentIndex - 1);
+    }
+
+    function stopRotation() {
+      if (intervalId !== null) {
+        window.clearInterval(intervalId);
+        intervalId = null;
+      }
+    }
+
+    function startRotation() {
+      stopRotation();
+      intervalId = window.setInterval(showNextSlide, rotationTime);
+    }
+
+    if (nextButton) {
+      nextButton.addEventListener("click", function () {
+        showNextSlide();
+        startRotation();
+      });
+    }
+
+    if (previousButton) {
+      previousButton.addEventListener("click", function () {
+        showPreviousSlide();
+        startRotation();
+      });
+    }
+
+    dots.forEach(function (dot, index) {
+      dot.addEventListener("click", function () {
+        showSlide(index);
+        startRotation();
+      });
+    });
+
+    carousel.addEventListener("mouseenter", stopRotation);
+    carousel.addEventListener("mouseleave", startRotation);
+    carousel.addEventListener("focusin", stopRotation);
+    carousel.addEventListener("focusout", startRotation);
+
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) {
+        stopRotation();
+      } else {
+        startRotation();
+      }
+    });
+
+    showSlide(0);
+    startRotation();
+  });
+</script>
