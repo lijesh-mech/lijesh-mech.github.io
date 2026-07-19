@@ -638,14 +638,111 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
 
   <div class="academic-grid">
 
-    <!-- LEFT PHOTO -->
-    <aside class="profile-photo-card">
-      <img
-        src="{{ '/assets/img/lijesh_profile.jpg' | relative_url }}"
-        alt="Dr. Lijesh Koottaparambil"
-        class="profile-photo"
+<!-- LEFT PHOTO AND CONTACT CARD -->
+<aside class="profile-photo-card">
+
+  <img
+    src="{{ '/assets/img/lijesh_profile.jpg' | relative_url }}"
+    alt="Dr. Lijesh Koottaparambil"
+    class="profile-photo"
+  >
+
+  <div class="profile-contact-panel">
+
+    <div class="profile-contact-list">
+
+      <a class="profile-contact-item" href="mailto:lijesh@lsu.edu">
+        <span class="profile-contact-icon">
+          <svg aria-hidden="true">
+            <use href="#icon-mail"></use>
+          </svg>
+        </span>
+
+        <span class="profile-contact-copy">
+          <strong>Email</strong>
+          <span>lijesh@lsu.edu</span>
+        </span>
+      </a>
+
+      <a class="profile-contact-item" href="mailto:lijesh_mech@yahoo.co.in">
+        <span class="profile-contact-icon">
+          <svg aria-hidden="true">
+            <use href="#icon-mail"></use>
+          </svg>
+        </span>
+
+        <span class="profile-contact-copy">
+          <strong>Secondary Email</strong>
+          <span>lijesh_mech@yahoo.co.in</span>
+        </span>
+      </a>
+
+      <a class="profile-contact-item" href="tel:+16465499651">
+        <span class="profile-contact-icon">
+          <svg aria-hidden="true">
+            <use href="#icon-phone"></use>
+          </svg>
+        </span>
+
+        <span class="profile-contact-copy">
+          <strong>Phone</strong>
+          <span>(646) 549-9651</span>
+        </span>
+      </a>
+
+    </div>
+
+    <div class="profile-contact-divider"></div>
+
+    <nav class="profile-social-links" aria-label="Professional profiles">
+
+      <a
+        href="https://scholar.google.com/citations?user=h7tDdkwAAAAJ"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-    </aside>
+        <span class="profile-social-icon">
+          <svg aria-hidden="true">
+            <use href="#icon-scholar"></use>
+          </svg>
+        </span>
+        <span>Google Scholar</span>
+        <span class="profile-social-arrow">→</span>
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/lijesh-koottaparambil-12270b95/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="profile-social-icon">
+          <svg aria-hidden="true">
+            <use href="#icon-linkedin"></use>
+          </svg>
+        </span>
+        <span>LinkedIn</span>
+        <span class="profile-social-arrow">→</span>
+      </a>
+
+      <a
+        href="https://www.researchgate.net/profile/Lijesh-P-2"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="profile-social-icon">
+          <svg aria-hidden="true">
+            <use href="#icon-researchgate"></use>
+          </svg>
+        </span>
+        <span>ResearchGate</span>
+        <span class="profile-social-arrow">→</span>
+      </a>
+
+    </nav>
+
+  </div>
+
+</aside>
 
     <!-- CENTER CONTENT -->
     <main class="biography-panel">
