@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: "Research Associate | Center for Rotating Machinery (CeRoM), Louisiana State University"
 
