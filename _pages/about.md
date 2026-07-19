@@ -1,22 +1,16 @@
 ---
-layout: about
+layout: page
 title: About
 permalink: /
-subtitle: Research Associate | Center for Rotating Machinery (CeRoM), Louisiana State University
-
-profile:
-  align: right
-  image: lijesh_profile.jpg
-  image_circular: false
-  more_info:
-
-selected_papers: false
-social: false
+nav: true
+nav_order: 1
+description: "Academic website of Dr. Lijesh Koottaparambil"
 ---
 
 <div class="custom-home">
 
   <aside class="home-sidebar">
+
     <img
       src="{{ '/assets/img/lijesh_profile.jpg' | relative_url }}"
       alt="Dr. Lijesh Koottaparambil"
@@ -24,6 +18,7 @@ social: false
     >
 
     <div class="home-stats">
+
       <div class="stat-item">
         <span class="stat-number">110+</span>
         <span class="stat-label">Publications</span>
@@ -38,21 +33,26 @@ social: false
         <span class="stat-number">15+</span>
         <span class="stat-label">Years of Research</span>
       </div>
+
     </div>
+
   </aside>
 
   <main class="home-main">
 
     <header class="home-header">
+
       <h1>Dr. Lijesh Koottaparambil</h1>
 
       <p class="home-position">
         Research Associate | Center for Rotating Machinery (CeRoM),
         Louisiana State University
       </p>
+
     </header>
 
     <section class="home-biography">
+
       <p>
         I am <strong>Dr. Lijesh Koottaparambil</strong>, a Research Associate
         at the <strong>Center for Rotating Machinery (CeRoM), Louisiana State
@@ -71,44 +71,61 @@ social: false
         technologies for predicting degradation, remaining useful life, and
         process quality across engineering and manufacturing systems.
       </p>
+
     </section>
 
     <section class="research-tags">
+
       <span>Degradation Entropy Generation</span>
       <span>Tribology</span>
       <span>Hydrogen Embrittlement</span>
       <span>Molecular Dynamics</span>
       <span>Food Manufacturing</span>
       <span>Battery Diagnostics</span>
+
     </section>
 
     <section class="home-social-links">
+
       {% include social.html %}
+
     </section>
 
   </main>
 
   <aside class="home-news">
-    <h2>News & Updates</h2>
+
+    <h2>News &amp; Updates</h2>
 
     <div class="news-item">
       <span class="news-year">2026</span>
-      <p>Appointed Associate Editor of the ASME Journal of Tribology.</p>
+      <p>
+        Appointed Associate Editor of the ASME Journal of Tribology.
+      </p>
     </div>
 
     <div class="news-item">
       <span class="news-year">2025</span>
-      <p>New U.S. patent granted for real-time food-process monitoring.</p>
+      <p>
+        New U.S. patent granted for real-time food-process monitoring.
+      </p>
     </div>
 
     <div class="news-item">
       <span class="news-year">2025</span>
-      <p>Advanced entropy-based approaches for engineering degradation assessment.</p>
+      <p>
+        Advanced entropy-based approaches for engineering degradation
+        assessment.
+      </p>
     </div>
 
-    <a class="news-link" href="{{ '/awards/' | relative_url }}">
-      View professional highlights →
+    <a
+      class="news-link"
+      href="{{ '/awards/' | relative_url }}"
+    >
+      View Awards &amp; Honors →
     </a>
+
   </aside>
 
 </div>
