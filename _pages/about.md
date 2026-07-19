@@ -2,16 +2,13 @@
 layout: about
 title: About
 permalink: /
-subtitle: "Research Associate | Center for Rotating Machinery (CeRoM), Louisiana State University"
+subtitle: Research Associate | Center for Rotating Machinery (CeRoM), Louisiana State University
 
 profile:
   align: right
   image: lijesh_profile.jpg
   image_circular: false
-  more_info: >
-    <p>Department of Mechanical & Industrial Engineering</p>
-    <p>Louisiana State University</p>
-    <p>Baton Rouge, Louisiana, USA</p>
+  more_info:
 
 selected_papers: false
 social: false
