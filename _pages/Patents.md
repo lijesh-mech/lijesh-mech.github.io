@@ -2,11 +2,11 @@
 layout: page
 title: Patents
 permalink: /Patents/
-description: A growing collection of my projects.
+description: Patests Awarded
 nav: true
 nav_order: 5
 display_categories: [work, fun]
-horizontal: false
+horizontal: true
 ---
 
 <!-- pages/projects.md -->
