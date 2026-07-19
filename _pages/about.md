@@ -7,17 +7,27 @@ nav_order: 1
 description: "Academic website of Dr. Lijesh Koottaparambil"
 ---
 <style>
-  .custom-home {
-    display: grid;
-    grid-template-columns: 190px minmax(0, 1fr) 235px;
-    gap: 24px;
-    align-items: start;
-    margin-top: 25px;
+  /* Expand the page width */
+  .post,
+  .post-content,
+  .container,
+  main {
+    max-width: 1500px !important;
+    width: 96% !important;
   }
 
-  /* Left profile section */
+  .custom-home {
+    display: grid;
+    grid-template-columns: 255px minmax(0, 1fr) 300px;
+    gap: 34px;
+    align-items: start;
+    width: 100%;
+    margin: 28px auto 0;
+  }
+
+  /* Left purple profile panel */
   .home-sidebar {
-    min-height: 610px;
+    min-height: 720px;
     background-color: #461d7c;
     border: 1px solid #35145f;
     color: #ffffff;
@@ -27,42 +37,46 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
   .home-sidebar img {
     display: block;
     width: 100% !important;
-    height: auto !important;
+    height: 285px !important;
     margin: 0;
     object-fit: cover;
+    object-position: top center;
   }
 
   .home-sidebar p {
     margin: 0;
-    padding: 12px 16px 0;
+    padding: 16px 20px 0;
     color: #ffffff;
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 1.35;
   }
 
   .home-sidebar p strong {
+    display: inline-block;
+    margin-right: 4px;
     color: #fdd023;
-    font-size: 22px;
+    font-size: 24px;
   }
 
-  /* Center section */
+  /* Main center content */
   .home-main {
     min-width: 0;
-    padding-top: 3px;
+    padding-top: 2px;
   }
 
   .home-main > h1 {
-    margin-top: 0;
-    margin-bottom: 5px;
-    padding-bottom: 7px;
+    margin: 0 0 6px;
+    padding-bottom: 10px;
     border-bottom: 2px solid #461d7c;
-    font-size: 32px;
-    font-weight: 400;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.2;
   }
 
   .home-main > h1 + p {
-    margin-top: 0;
-    margin-bottom: 28px;
-    font-size: 13px;
+    margin: 0 0 30px;
+    font-size: 15px;
+    line-height: 1.5;
   }
 
   .home-main hr {
@@ -70,26 +84,27 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
   }
 
   .home-main p {
-    font-size: 14px;
-    line-height: 1.55;
+    font-size: 16px;
+    line-height: 1.65;
+    margin-bottom: 18px;
   }
 
   .home-main h3 {
-    margin-top: 25px;
+    margin-top: 28px;
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 23px;
   }
 
-  /* Professional-profile buttons */
+  /* Profile buttons */
   .home-main h3:last-of-type + p {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 10px;
   }
 
   .home-main h3:last-of-type + p a {
     display: inline-block;
-    padding: 8px 11px;
+    padding: 10px 14px;
     border-radius: 4px;
     background-color: #461d7c;
     color: #ffffff !important;
@@ -101,35 +116,40 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
     color: #fdd023 !important;
   }
 
-  /* Right news section */
+  /* Right news panel */
   .home-news {
-    padding: 18px;
+    padding: 22px;
     background-color: #f4f4f4;
-    border-top: 5px solid #461d7c;
+    border-top: 6px solid #461d7c;
   }
 
   .home-news h2 {
-    margin-top: 0;
-    margin-bottom: 18px;
-    font-size: 23px;
+    margin: 0 0 20px;
+    font-size: 26px;
   }
 
   .home-news p {
-    margin-bottom: 16px;
-    padding-bottom: 14px;
+    margin-bottom: 18px;
+    padding-bottom: 16px;
     border-bottom: 1px solid #d5d5d5;
-    font-size: 13px;
-    line-height: 1.45;
+    font-size: 14px;
+    line-height: 1.5;
   }
 
   .home-news p strong {
     color: #461d7c;
   }
 
-  /* Tablet layout */
-  @media screen and (max-width: 1000px) {
+  /* Hide only the visible page title area above the custom layout */
+  .post-header > h1,
+  .post-header > .post-description {
+    display: none !important;
+  }
+
+  /* Tablet */
+  @media screen and (max-width: 1150px) {
     .custom-home {
-      grid-template-columns: 190px minmax(0, 1fr);
+      grid-template-columns: 230px minmax(0, 1fr);
     }
 
     .home-news {
@@ -137,32 +157,39 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
     }
 
     .home-sidebar {
-      min-height: 530px;
+      min-height: 650px;
     }
   }
 
-  /* Mobile layout */
-  @media screen and (max-width: 700px) {
+  /* Mobile */
+  @media screen and (max-width: 760px) {
+    .post,
+    .post-content,
+    .container,
+    main {
+      width: 94% !important;
+    }
+
     .custom-home {
       display: block;
     }
 
     .home-sidebar {
       min-height: auto;
-      margin-bottom: 25px;
-    }
-
-    .home-sidebar img {
-      max-height: 420px;
-      object-position: top;
-    }
-
-    .home-main {
       margin-bottom: 28px;
     }
 
+    .home-sidebar img {
+      height: auto !important;
+      max-height: 430px;
+    }
+
+    .home-main {
+      margin-bottom: 30px;
+    }
+
     .home-main > h1 {
-      font-size: 28px;
+      font-size: 31px;
     }
 
     .home-news {
