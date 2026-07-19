@@ -207,9 +207,52 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
       style="width: 240px; height: auto;"
     >
 
-    <p><strong>110+</strong> Publications</p>
-    <p><strong>8</strong> Patents</p>
-    <p><strong>15+</strong> Years of Research</p>
+<p>
+<strong>Email</strong><br>
+<a href="mailto:lijesh@lsu.edu" style="color:white;">
+lijesh@lsu.edu
+</a>
+</p>
+
+<p>
+<strong>Secondary Email</strong><br>
+<a href="mailto:lijesh_mech@yahoo.com" style="color:white;">
+lijesh_mech@yahoo.com
+</a>
+</p>
+
+<p>
+<strong>Phone</strong><br>
+<a href="tel:+16465499651" style="color:white;">
+(646) 549-9651
+</a>
+</p>
+
+<hr style="border-color:rgba(255,255,255,.3); margin:20px 0;">
+
+<p>
+<a href="https://scholar.google.com/citations?user=h7tDdkwAAAAJ"
+target="_blank"
+style="color:#FDD023;font-weight:bold;text-decoration:none;">
+Google Scholar →
+</a>
+</p>
+
+<p>
+<a href="https://www.linkedin.com/in/lijesh-koottaparambil-12270b95/"
+target="_blank"
+style="color:#FDD023;font-weight:bold;text-decoration:none;">
+LinkedIn →
+</a>
+</p>
+
+<p>
+<a href="https://www.researchgate.net/profile/Lijesh-P-2"
+target="_blank"
+style="color:#FDD023;font-weight:bold;text-decoration:none;">
+ResearchGate →
+</a>
+</p>
 
   </div>
 
@@ -254,14 +297,6 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
       Battery Diagnostics
     </p>
 
-    <h3>Professional Profiles</h3>
-
-    <p>
-      <a href="mailto:lijesh@lsu.edu">Email</a> |
-      <a href="https://www.linkedin.com/in/lijesh-koottaparambil-12270b95/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
-      <a href="https://scholar.google.com/citations?user=h7tDdkwAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a> |
-      <a href="https://www.researchgate.net/profile/Lijesh-P-2" target="_blank" rel="noopener noreferrer">ResearchGate</a>
-    </p>
 
   </div>
 
