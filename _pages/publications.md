@@ -38,26 +38,21 @@ description: "Complete publication list of Dr. Lijesh Koottaparambil"
   }
 
   .publications-hero {
-    padding: 34px 40px;
-    background: linear-gradient(
-        135deg,
-        #461d7c 0%,
-        #3b1a68 55%,
-        #2d0f54 100%
-    );
-    border-radius: 14px;
-    border: none;
-    box-shadow: 0 12px 28px rgba(35,20,60,.18);
-}
-  .publications-hero {
-  margin: 0 0 14px;
-  font-size: clamp(34px, 4vw, 52px);
-  font-weight: 750;
-  letter-spacing: -0.03em;
-  color: #ffffff;
-  border-bottom: none;
-  box-shadow: none;
-}
+    padding: 30px 34px;
+    background:
+      linear-gradient(135deg, rgba(70, 29, 124, 0.98), rgba(50, 16, 95, 0.95));
+    border-radius: 12px;
+    color: #ffffff;
+    box-shadow: 0 10px 30px rgba(35, 20, 60, 0.12);
+  }
+
+  .publications-hero h1 {
+    margin: 0 0 10px;
+    font-size: clamp(34px, 4vw, 52px);
+    color: #ffffff;
+    font-weight: 750;
+    letter-spacing: -0.03em;
+  }
 
   .publications-hero p {
     max-width: 780px;
@@ -302,11 +297,6 @@ description: "Complete publication list of Dr. Lijesh Koottaparambil"
 
   <header class="publications-hero">
     <h1>Publications</h1>
-    <p>
-      Complete scholarly publication record arranged in reverse chronological
-      order. Use the search field to filter by author, title, journal, topic,
-      or publication year.
-    </p>
   </header>
 
   <div class="publications-toolbar">
@@ -496,7 +486,6 @@ description: "Complete publication list of Dr. Lijesh Koottaparambil"
             </div>
             
             <div class="publication-actions">
-              
             </div>
           </div>
         </article>
@@ -667,7 +656,6 @@ description: "Complete publication list of Dr. Lijesh Koottaparambil"
             </div>
             
             <div class="publication-actions">
-              
             </div>
           </div>
         </article>
@@ -883,7 +871,6 @@ description: "Complete publication list of Dr. Lijesh Koottaparambil"
             </div>
             
             <div class="publication-actions">
-              
             </div>
           </div>
         </article>
@@ -943,7 +930,6 @@ description: "Complete publication list of Dr. Lijesh Koottaparambil"
             </div>
             
             <div class="publication-actions">
-              
             </div>
           </div>
         </article>
@@ -955,7 +941,6 @@ description: "Complete publication list of Dr. Lijesh Koottaparambil"
             </div>
             
             <div class="publication-actions">
-              
             </div>
           </div>
         </article>
@@ -967,7 +952,6 @@ description: "Complete publication list of Dr. Lijesh Koottaparambil"
             </div>
             
             <div class="publication-actions">
-              
             </div>
           </div>
         </article>
@@ -979,7 +963,6 @@ description: "Complete publication list of Dr. Lijesh Koottaparambil"
             </div>
             
             <div class="publication-actions">
-              
             </div>
           </div>
         </article>
@@ -991,7 +974,6 @@ description: "Complete publication list of Dr. Lijesh Koottaparambil"
             </div>
             
             <div class="publication-actions">
-              
             </div>
           </div>
         </article>
@@ -1003,7 +985,6 @@ description: "Complete publication list of Dr. Lijesh Koottaparambil"
             </div>
             
             <div class="publication-actions">
-              
             </div>
           </div>
         </article>
@@ -1024,7 +1005,6 @@ description: "Complete publication list of Dr. Lijesh Koottaparambil"
             </div>
             
             <div class="publication-actions">
-              
             </div>
           </div>
         </article>
@@ -1036,7 +1016,6 @@ description: "Complete publication list of Dr. Lijesh Koottaparambil"
             </div>
             
             <div class="publication-actions">
-              
             </div>
           </div>
         </article>
@@ -1057,7 +1036,6 @@ description: "Complete publication list of Dr. Lijesh Koottaparambil"
             </div>
             
             <div class="publication-actions">
-              
             </div>
           </div>
         </article>
@@ -1069,7 +1047,6 @@ description: "Complete publication list of Dr. Lijesh Koottaparambil"
             </div>
             
             <div class="publication-actions">
-              
             </div>
           </div>
         </article>
@@ -1081,7 +1058,6 @@ description: "Complete publication list of Dr. Lijesh Koottaparambil"
             </div>
             
             <div class="publication-actions">
-              
             </div>
           </div>
         </article>
@@ -1093,7 +1069,6 @@ description: "Complete publication list of Dr. Lijesh Koottaparambil"
             </div>
             
             <div class="publication-actions">
-              
             </div>
           </div>
         </article>
@@ -1105,7 +1080,6 @@ description: "Complete publication list of Dr. Lijesh Koottaparambil"
             </div>
             
             <div class="publication-actions">
-              
             </div>
           </div>
         </article>
@@ -1126,7 +1100,6 @@ description: "Complete publication list of Dr. Lijesh Koottaparambil"
             </div>
             
             <div class="publication-actions">
-              
             </div>
           </div>
         </article>
@@ -1138,7 +1111,6 @@ description: "Complete publication list of Dr. Lijesh Koottaparambil"
             </div>
             
             <div class="publication-actions">
-              
             </div>
           </div>
         </article>
@@ -1150,7 +1122,6 @@ description: "Complete publication list of Dr. Lijesh Koottaparambil"
             </div>
             
             <div class="publication-actions">
-              
             </div>
           </div>
         </article>
@@ -1162,7 +1133,6 @@ description: "Complete publication list of Dr. Lijesh Koottaparambil"
             </div>
             
             <div class="publication-actions">
-              
             </div>
           </div>
         </article>
@@ -1174,7 +1144,6 @@ description: "Complete publication list of Dr. Lijesh Koottaparambil"
             </div>
             
             <div class="publication-actions">
-              
             </div>
           </div>
         </article>
@@ -1186,7 +1155,6 @@ description: "Complete publication list of Dr. Lijesh Koottaparambil"
             </div>
             
             <div class="publication-actions">
-              
             </div>
           </div>
         </article>
@@ -1198,7 +1166,6 @@ description: "Complete publication list of Dr. Lijesh Koottaparambil"
             </div>
             
             <div class="publication-actions">
-              
             </div>
           </div>
         </article>
@@ -1210,7 +1177,6 @@ description: "Complete publication list of Dr. Lijesh Koottaparambil"
             </div>
             
             <div class="publication-actions">
-              
             </div>
           </div>
         </article>
@@ -1222,7 +1188,6 @@ description: "Complete publication list of Dr. Lijesh Koottaparambil"
             </div>
             
             <div class="publication-actions">
-              
             </div>
           </div>
         </article>
@@ -1243,7 +1208,6 @@ description: "Complete publication list of Dr. Lijesh Koottaparambil"
             </div>
             
             <div class="publication-actions">
-              
             </div>
           </div>
         </article>
@@ -1255,7 +1219,6 @@ description: "Complete publication list of Dr. Lijesh Koottaparambil"
             </div>
             
             <div class="publication-actions">
-              
             </div>
           </div>
         </article>
@@ -1267,7 +1230,6 @@ description: "Complete publication list of Dr. Lijesh Koottaparambil"
             </div>
             
             <div class="publication-actions">
-              
             </div>
           </div>
         </article>
