@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-permalink: /
+permalink: /About/
 nav: true
 nav_order: 1
 description: "Academic website of Dr. Lijesh Koottaparambil"
