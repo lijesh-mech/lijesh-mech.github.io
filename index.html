@@ -16,44 +16,147 @@
 
   .custom-home {
     display: grid;
-    grid-template-columns: 255px minmax(0, 1fr) 300px;
-    gap: 34px;
+    grid-template-columns: 285px minmax(0, 1fr) 310px;
+    gap: 36px;
     align-items: start;
     width: 100%;
     margin: 28px auto 0;
   }
 
-  /* Left purple profile panel */
+  /* Professional left profile panel */
   .home-sidebar {
     min-height: 720px;
-    background-color: #461d7c;
-    border: 1px solid #35145f;
-    color: #ffffff;
     overflow: hidden;
+    background: #461d7c;
+    border: 1px solid rgba(70, 29, 124, 0.35);
+    border-radius: 8px;
+    color: #ffffff;
   }
 
-  .home-sidebar img {
+  .profile-image-wrapper {
+    padding: 10px 10px 0;
+    background: #461d7c;
+  }
+
+  .sidebar-profile-image {
     display: block;
     width: 100% !important;
-    height: 285px !important;
+    height: 295px !important;
     margin: 0;
+    border-radius: 4px 4px 0 0;
     object-fit: cover;
     object-position: top center;
   }
 
-  .home-sidebar p {
-    margin: 0;
-    padding: 16px 20px 0;
-    color: #ffffff;
-    font-size: 15px;
-    line-height: 1.35;
+  .sidebar-content {
+    padding: 24px 20px 28px;
   }
 
-  .home-sidebar p strong {
-    display: inline-block;
-    margin-right: 4px;
+  .sidebar-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .contact-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 8px;
+    border-radius: 5px;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    transition:
+      background-color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .contact-row:hover {
+    background: rgba(255, 255, 255, 0.11);
+    transform: translateX(2px);
+  }
+
+  .contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 34px;
+    width: 34px;
+    height: 34px;
+    border: 1px solid rgba(253, 208, 35, 0.75);
+    border-radius: 50%;
     color: #fdd023;
-    font-size: 24px;
+    font-size: 15px;
+  }
+
+  .contact-text {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+  }
+
+  .contact-text small {
+    margin-bottom: 2px;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .contact-text strong {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+
+  .sidebar-divider {
+    height: 1px;
+    margin: 22px 0 18px;
+    background: rgba(255, 255, 255, 0.22);
+  }
+
+  .sidebar-profiles {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .sidebar-profiles a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px 12px;
+    border: 1px solid rgba(253, 208, 35, 0.45);
+    border-radius: 5px;
+    color: #ffffff !important;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none !important;
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease;
+  }
+
+  .sidebar-profiles a:hover {
+    background: #fdd023;
+    border-color: #fdd023;
+    color: #35145f !important;
+  }
+
+  .profile-arrow {
+    color: #fdd023;
+    font-size: 15px;
+    transition: transform 0.2s ease;
+  }
+
+  .sidebar-profiles a:hover .profile-arrow {
+    color: #35145f;
+    transform: translate(2px, -2px);
   }
 
   /* Main center content */
@@ -71,47 +174,42 @@
     line-height: 1.2;
   }
 
-  .home-main > h1 + p {
+  .home-position {
     margin: 0 0 30px;
+    color: var(--global-text-color-light);
     font-size: 15px;
     line-height: 1.5;
   }
 
-  .home-main hr {
-    display: none;
-  }
-
   .home-main p {
+    margin-bottom: 19px;
     font-size: 16px;
-    line-height: 1.65;
-    margin-bottom: 18px;
+    line-height: 1.67;
   }
 
   .home-main h3 {
-    margin-top: 28px;
-    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 12px;
     font-size: 23px;
+    font-weight: 500;
   }
 
-  /* Profile buttons */
-  .home-main h3:last-of-type + p {
+  /* Research-interest tags */
+  .research-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 9px;
+    margin-top: 12px;
   }
 
-  .home-main h3:last-of-type + p a {
+  .research-tags span {
     display: inline-block;
-    padding: 10px 14px;
-    border-radius: 4px;
-    background-color: #461d7c;
-    color: #ffffff !important;
-    text-decoration: none;
-  }
-
-  .home-main h3:last-of-type + p a:hover {
-    background-color: #5f2a96;
-    color: #fdd023 !important;
+    padding: 8px 12px;
+    border: 1px solid rgba(70, 29, 124, 0.55);
+    border-radius: 999px;
+    background: rgba(70, 29, 124, 0.04);
+    font-size: 13px;
+    line-height: 1.2;
   }
 
   /* Right news panel */
@@ -119,26 +217,43 @@
     padding: 22px;
     background-color: #f4f4f4;
     border-top: 6px solid #461d7c;
+    border-radius: 0 0 6px 6px;
   }
 
   .home-news h2 {
     margin: 0 0 20px;
     font-size: 26px;
+    font-weight: 500;
   }
 
-  .home-news p {
+  .news-item {
     margin-bottom: 18px;
     padding-bottom: 16px;
     border-bottom: 1px solid #d5d5d5;
+  }
+
+  .news-year {
+    display: inline-block;
+    margin-bottom: 6px;
+    color: #461d7c;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .news-item p {
+    margin: 0;
     font-size: 14px;
     line-height: 1.5;
   }
 
-  .home-news p strong {
-    color: #461d7c;
+  .news-link {
+    display: inline-block;
+    margin-top: 4px;
+    font-weight: 600;
+    text-decoration: none;
   }
 
-  /* Hide only the visible page title area above the custom layout */
+  /* Hide only the default heading area above the custom content */
   .post-header > h1,
   .post-header > .post-description {
     display: none !important;
@@ -147,7 +262,7 @@
   /* Tablet */
   @media screen and (max-width: 1150px) {
     .custom-home {
-      grid-template-columns: 230px minmax(0, 1fr);
+      grid-template-columns: 260px minmax(0, 1fr);
     }
 
     .home-news {
@@ -155,7 +270,7 @@
     }
 
     .home-sidebar {
-      min-height: 650px;
+      min-height: 660px;
     }
   }
 
@@ -177,7 +292,7 @@
       margin-bottom: 28px;
     }
 
-    .home-sidebar img {
+    .sidebar-profile-image {
       height: auto !important;
       max-height: 430px;
     }
@@ -194,7 +309,7 @@
       margin-top: 25px;
     }
   }
-</style> <div class="custom-home"> <div class="home-sidebar"> <img src="/assets/img/lijesh_profile.jpg" alt="Dr. Lijesh Koottaparambil" style="width: 240px; height: auto;"> <p> <strong>Email</strong><br> <a href="mailto:lijesh@lsu.edu" style="color:white;"> lijesh@lsu.edu </a> </p> <p> <strong>Secondary Email</strong><br> <a href="mailto:lijesh_mech@yahoo.com" style="color:white;"> lijesh_mech@yahoo.com </a> </p> <p> <strong>Phone</strong><br> <a href="tel:+16465499651" style="color:white;"> (646) 549-9651 </a> </p> <hr style="border-color:rgba(255,255,255,.3); margin:20px 0;"> <p> <a href="https://scholar.google.com/citations?user=h7tDdkwAAAAJ" target="_blank" style="color:#FDD023;font-weight:bold;text-decoration:none;" rel="external nofollow noopener"> Google Scholar → </a> </p> <p> <a href="https://www.linkedin.com/in/lijesh-koottaparambil-12270b95/" target="_blank" style="color:#FDD023;font-weight:bold;text-decoration:none;" rel="external nofollow noopener"> LinkedIn → </a> </p> <p> <a href="https://www.researchgate.net/profile/Lijesh-P-2" target="_blank" style="color:#FDD023;font-weight:bold;text-decoration:none;" rel="external nofollow noopener"> ResearchGate → </a> </p> </div> <div class="home-main"> <h1>Dr. Lijesh Koottaparambil</h1> <p> Research Associate | Center for Rotating Machinery (CeRoM), Louisiana State University </p> <hr> <p> I am <strong>Dr. Lijesh Koottaparambil</strong>, a Research Associate at the <strong>Center for Rotating Machinery (CeRoM), Louisiana State University (LSU), USA</strong>. </p> <p> My research focuses on thermodynamics-based degradation assessment, tribology, hydrogen embrittlement, corrosion, molecular dynamics, food-process monitoring, battery health diagnostics, and AI-enabled intelligent manufacturing. </p> <p> My work aims to develop physics-informed methods and advanced sensing technologies for predicting degradation, remaining useful life, and process quality across engineering and manufacturing systems. </p> <h3>Research Interests</h3> <p> Degradation Entropy Generation | Tribology | Hydrogen Embrittlement | Molecular Dynamics | Food Manufacturing | Battery Diagnostics </p> </div> <div class="home-news"> <h2>News &amp; Updates</h2> <p> <strong>2026</strong><br> Appointed Associate Editor of the ASME Journal of Tribology. </p> <p> <strong>2025</strong><br> New U.S. patent granted for real-time food-process monitoring. </p> <p> <strong>2025</strong><br> Advanced entropy-based approaches for engineering degradation assessment. </p> <p> <a href="/awards/"> View Awards &amp; Honors </a> </p> </div> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Lijesh Koottaparambil. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script>
+</style> <div class="custom-home"> <aside class="home-sidebar"> <div class="profile-image-wrapper"> <img src="/assets/img/lijesh_profile.jpg" alt="Dr. Lijesh Koottaparambil" class="sidebar-profile-image"> </div> <div class="sidebar-content"> <div class="sidebar-contact"> <a class="contact-row" href="mailto:lijesh@lsu.edu"> <span class="contact-icon">✉</span> <span class="contact-text"> <small>University Email</small> <strong>lijesh@lsu.edu</strong> </span> </a> <a class="contact-row" href="mailto:lijesh_mech@yahoo.co.in"> <span class="contact-icon">✉</span> <span class="contact-text"> <small>Alternative Email</small> <strong>lijesh_mech@yahoo.co.in</strong> </span> </a> <a class="contact-row" href="tel:+16465499651"> <span class="contact-icon">☎</span> <span class="contact-text"> <small>Phone</small> <strong>(646) 549-9651</strong> </span> </a> </div> <div class="sidebar-divider"></div> <nav class="sidebar-profiles" aria-label="Professional profiles"> <a href="https://scholar.google.com/citations?user=h7tDdkwAAAAJ" target="_blank" rel="noopener noreferrer"> <span>Google Scholar</span> <span class="profile-arrow">↗</span> </a> <a href="https://www.linkedin.com/in/lijesh-koottaparambil-12270b95/" target="_blank" rel="noopener noreferrer"> <span>LinkedIn</span> <span class="profile-arrow">↗</span> </a> <a href="https://www.researchgate.net/profile/Lijesh-P-2" target="_blank" rel="noopener noreferrer"> <span>ResearchGate</span> <span class="profile-arrow">↗</span> </a> </nav> </div> </aside> <main class="home-main"> <h1>Dr. Lijesh Koottaparambil</h1> <p class="home-position"> Research Associate | Center for Rotating Machinery (CeRoM), Louisiana State University </p> <p> I am <strong>Dr. Lijesh Koottaparambil</strong>, a Research Associate at the <strong>Center for Rotating Machinery (CeRoM), Louisiana State University (LSU), USA</strong>. </p> <p> My research focuses on thermodynamics-based degradation assessment, tribology, hydrogen embrittlement, corrosion, molecular dynamics, food-process monitoring, battery health diagnostics, and AI-enabled intelligent manufacturing. </p> <p> My work aims to develop physics-informed methods and advanced sensing technologies for predicting degradation, remaining useful life, and process quality across engineering and manufacturing systems. </p> <h3>Research Interests</h3> <div class="research-tags"> <span>Degradation Entropy Generation</span> <span>Tribology</span> <span>Hydrogen Embrittlement</span> <span>Molecular Dynamics</span> <span>Food Manufacturing</span> <span>Battery Diagnostics</span> </div> </main> <aside class="home-news"> <h2>News &amp; Updates</h2> <div class="news-item"> <span class="news-year">2026</span> <p> Appointed Associate Editor of the ASME Journal of Tribology. </p> </div> <div class="news-item"> <span class="news-year">2025</span> <p> New U.S. patent granted for real-time food-process monitoring. </p> </div> <div class="news-item"> <span class="news-year">2025</span> <p> Advanced entropy-based approaches for engineering degradation assessment. </p> </div> <a class="news-link" href="/awards/"> View Awards &amp; Honors → </a> </aside> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Lijesh Koottaparambil. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };
