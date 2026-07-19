@@ -61,8 +61,8 @@ nav.navbar .navbar-brand,
 
   .academic-grid {
     display: grid;
-    grid-template-columns: 285px minmax(0, 1fr) 325px;
-    gap: 42px;
+    grid-template-columns: 285px minmax(0, 1fr) 430px;
+    gap: 34px;
     align-items: start;
   }
 
@@ -577,7 +577,8 @@ nav.navbar .navbar-brand,
 
   .poster-card {
     overflow: hidden;
-    padding: 22px;
+    width: 100%;
+    padding: 26px;
     background: var(--profile-background);
     border: 1px solid var(--profile-border);
     border-radius: 10px;
@@ -615,7 +616,7 @@ nav.navbar .navbar-brand,
   .poster-card-header h2 {
     margin: 0;
     color: var(--profile-purple);
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 700;
     line-height: 1.2;
   }
@@ -630,7 +631,7 @@ nav.navbar .navbar-brand,
   .poster-carousel {
     position: relative;
     width: 100%;
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 4 / 5;
     overflow: hidden;
     background: #f7f8fb;
     border: 1px solid var(--profile-border);
@@ -739,7 +740,7 @@ nav.navbar .navbar-brand,
     min-height: 38px;
     margin: 12px 0 0;
     color: var(--profile-text);
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 650;
     line-height: 1.5;
     text-align: center;
@@ -828,7 +829,7 @@ nav.navbar .navbar-brand,
      RESPONSIVE DESIGN
      ========================================================= */
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1320px) {
     .academic-grid {
       grid-template-columns: 260px minmax(0, 1fr);
       gap: 32px;
