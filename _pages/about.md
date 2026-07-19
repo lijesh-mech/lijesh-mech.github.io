@@ -7,208 +7,99 @@ nav_order: 1
 description: "Academic website of Dr. Lijesh Koottaparambil"
 ---
 
-<style>
-  /* Custom homepage container */
-  .custom-home {
-    display: grid;
-    grid-template-columns: 230px minmax(360px, 1fr) 300px;
-    gap: 30px;
-    align-items: start;
-    width: 100%;
-    margin-top: 20px;
-  }
+<div class="custom-home">
 
-  /* Purple profile sidebar */
-  .home-sidebar {
-    min-height: 650px;
-    overflow: hidden;
-    background: #461d7c;
-    border: 1px solid #35145f;
-  }
+  <div class="home-sidebar">
 
-  .home-profile-image {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin: 0;
-    object-fit: cover;
-  }
+    <img
+      src="{{ '/assets/img/lijesh_profile.jpg' | relative_url }}"
+      alt="Dr. Lijesh Koottaparambil"
+      style="width: 240px; height: auto;"
+    >
 
-  .home-stats {
-    padding: 24px 20px;
-  }
+    <p><strong>110+</strong> Publications</p>
+    <p><strong>8</strong> Patents</p>
+    <p><strong>15+</strong> Years of Research</p>
 
-  .stat-item {
-    margin-bottom: 24px;
-  }
+  </div>
 
-  .stat-number {
-    display: block;
-    color: #fdd023;
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 1.1;
-  }
+  <div class="home-main">
 
-  .stat-label {
-    display: block;
-    margin-top: 5px;
-    color: #ffffff;
-    font-size: 15px;
-  }
+    <h1>Dr. Lijesh Koottaparambil</h1>
 
-  /* Main biography section */
-  .home-main {
-    min-width: 0;
-    padding-top: 4px;
-  }
+    <p>
+      Research Associate | Center for Rotating Machinery (CeRoM),
+      Louisiana State University
+    </p>
 
-  .home-header {
-    margin-bottom: 35px;
-    padding-bottom: 12px;
-    border-bottom: 2px solid #461d7c;
-  }
+    <hr>
 
-  .home-header h1 {
-    margin: 0;
-    font-size: 34px;
-    font-weight: 400;
-    line-height: 1.2;
-  }
+    <p>
+      I am <strong>Dr. Lijesh Koottaparambil</strong>, a Research Associate
+      at the <strong>Center for Rotating Machinery (CeRoM), Louisiana State
+      University (LSU), USA</strong>.
+    </p>
 
-  .home-position {
-    margin: 8px 0 0;
-    font-size: 14px;
-    line-height: 1.5;
-  }
+    <p>
+      My research focuses on thermodynamics-based degradation assessment,
+      tribology, hydrogen embrittlement, corrosion, molecular dynamics,
+      food-process monitoring, battery health diagnostics, and
+      AI-enabled intelligent manufacturing.
+    </p>
 
-  .home-biography {
-    font-size: 16px;
-    line-height: 1.65;
-  }
+    <p>
+      My work aims to develop physics-informed methods and advanced sensing
+      technologies for predicting degradation, remaining useful life, and
+      process quality across engineering and manufacturing systems.
+    </p>
 
-  .home-biography p {
-    margin-bottom: 22px;
-  }
+    <h3>Research Interests</h3>
 
-  /* Research-interest pills */
-  .research-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 9px;
-    margin-top: 25px;
-  }
+    <p>
+      Degradation Entropy Generation |
+      Tribology |
+      Hydrogen Embrittlement |
+      Molecular Dynamics |
+      Food Manufacturing |
+      Battery Diagnostics
+    </p>
 
-  .research-tags span {
-    display: inline-block;
-    padding: 7px 12px;
-    border: 1px solid #461d7c;
-    border-radius: 20px;
-    font-size: 13px;
-    line-height: 1.2;
-  }
+    <h3>Professional Profiles</h3>
 
-  /* Professional links */
-  .home-social-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 30px;
-  }
+    <p>
+      <a href="mailto:lijesh@lsu.edu">Email</a> |
+      <a href="https://www.linkedin.com/in/lijesh-koottaparambil-12270b95/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+      <a href="https://scholar.google.com/citations?user=h7tDdkwAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a> |
+      <a href="https://www.researchgate.net/profile/Lijesh-P-2" target="_blank" rel="noopener noreferrer">ResearchGate</a>
+    </p>
 
-  .home-social-links a {
-    display: inline-block;
-    padding: 9px 14px;
-    border-radius: 4px;
-    background: #461d7c;
-    color: #ffffff !important;
-    font-size: 14px;
-    font-weight: 500;
-    text-decoration: none !important;
-  }
+  </div>
 
-  .home-social-links a:hover {
-    background: #5f2d91;
-    color: #fdd023 !important;
-  }
+  <div class="home-news">
 
-  /* News panel */
-  .home-news {
-    padding: 22px;
-    background: #f3f3f3;
-    border-top: 6px solid #461d7c;
-  }
+    <h2>News &amp; Updates</h2>
 
-  .home-news h2 {
-    margin: 0 0 22px;
-    font-size: 24px;
-    font-weight: 500;
-  }
+    <p>
+      <strong>2026</strong><br>
+      Appointed Associate Editor of the ASME Journal of Tribology.
+    </p>
 
-  .news-item {
-    margin-bottom: 18px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid #d6d6d6;
-  }
+    <p>
+      <strong>2025</strong><br>
+      New U.S. patent granted for real-time food-process monitoring.
+    </p>
 
-  .news-year {
-    display: block;
-    margin-bottom: 5px;
-    color: #461d7c;
-    font-size: 13px;
-    font-weight: 700;
-  }
+    <p>
+      <strong>2025</strong><br>
+      Advanced entropy-based approaches for engineering degradation assessment.
+    </p>
 
-  .news-item p {
-    margin: 0;
-    font-size: 14px;
-    line-height: 1.5;
-  }
+    <p>
+      <a href="{{ '/awards/' | relative_url }}">
+        View Awards &amp; Honors
+      </a>
+    </p>
 
-  .news-link {
-    display: inline-block;
-    margin-top: 5px;
-    font-weight: 600;
-  }
+  </div>
 
-
-  /* Tablet layout */
-  @media screen and (max-width: 1100px) {
-    .custom-home {
-      grid-template-columns: 210px minmax(0, 1fr);
-    }
-
-    .home-news {
-      grid-column: 1 / -1;
-    }
-  }
-
-  /* Mobile layout */
-  @media screen and (max-width: 700px) {
-    .custom-home {
-      display: block;
-    }
-
-    .home-sidebar {
-      min-height: auto;
-      margin-bottom: 28px;
-    }
-
-    .home-profile-image {
-      max-height: 430px;
-      object-position: top;
-    }
-
-    .home-main {
-      margin-bottom: 30px;
-    }
-
-    .home-header h1 {
-      font-size: 29px;
-    }
-
-    .home-news {
-      margin-top: 25px;
-    }
-  }
-</style>
+</div>
