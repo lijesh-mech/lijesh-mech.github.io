@@ -6,7 +6,7 @@ subtitle: "Research Associate | Center for Rotating Machinery (CeRoM), Louisiana
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: lijesh_profile.jpg
   image_circular: false
   more_info: >
     <p>Department of Mechanical & Industrial Engineering</p>
