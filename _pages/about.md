@@ -38,8 +38,13 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
     Hide the site-title/brand that produces the first duplicate "About".
     The navigation-menu About remains visible.
   */
-  .navbar-brand {
-    display: none !important;
+  /* Hide the website brand/title that creates the first duplicate About */
+header .navbar-brand,
+header .navbar-brand *,
+nav.navbar .navbar-brand,
+.navbar-header .navbar-brand,
+.navbar .navbar-brand {
+  display: none !important;
   }
 
   /* Hide the standard al-folio footer */
@@ -240,7 +245,29 @@ description: "Academic website of Dr. Lijesh Koottaparambil"
     line-height: 1;
     text-align: right;
   }
+/* Keep professional-profile text visible on the purple background */
+.profile-social-links a,
+.profile-social-links a span {
+  color: #ffffff !important;
+}
 
+/* Keep the icons and arrows gold */
+.profile-social-links a .profile-social-icon,
+.profile-social-links a .profile-social-arrow {
+  color: var(--profile-gold) !important;
+}
+
+/* Keep the text white during hover */
+.profile-social-links a:hover,
+.profile-social-links a:hover span {
+  color: #ffffff !important;
+}
+
+/* Keep the icons gold during hover */
+.profile-social-links a:hover .profile-social-icon,
+.profile-social-links a:hover .profile-social-arrow {
+  color: var(--profile-gold) !important;
+}
   /* =========================================================
      CENTER PROFILE CONTENT
      ========================================================= */
