@@ -182,6 +182,109 @@ nav.navbar .navbar-brand,
     overflow-wrap: anywhere;
   }
 
+
+  /* Email address and copy-to-clipboard controls */
+  .email-contact-item {
+    grid-template-columns: 30px minmax(0, 1fr) 30px;
+  }
+
+  .email-contact-link {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    color: #ffffff !important;
+    text-decoration: none !important;
+  }
+
+  .email-contact-link strong {
+    margin: 0;
+    color: #ffffff !important;
+    font-size: 12px;
+    font-weight: 750;
+    line-height: 1.3;
+  }
+
+  .email-contact-link span {
+    margin-top: 3px;
+    color: rgba(255, 255, 255, 0.82) !important;
+    font-size: 11px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+
+  .copy-email-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    border-radius: 6px;
+    color: var(--profile-gold);
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .copy-email-button:hover,
+  .copy-email-button:focus-visible {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.58);
+    color: #ffffff;
+    outline: none;
+    transform: scale(1.06);
+  }
+
+  .copy-email-button svg {
+    display: block;
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .copy-email-button.copied {
+    background: rgba(255, 255, 255, 0.16);
+    border-color: rgba(255, 255, 255, 0.58);
+    color: #8ff0a4;
+  }
+
+  .copy-email-tooltip {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 8px);
+    z-index: 10;
+    padding: 5px 8px;
+    background: #ffffff;
+    border-radius: 5px;
+    color: var(--profile-purple-dark);
+    font-size: 10px;
+    font-weight: 750;
+    line-height: 1;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(3px);
+    transition:
+      opacity 0.18s ease,
+      transform 0.18s ease;
+  }
+
+  .copy-email-button.copied .copy-email-tooltip {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   .profile-divider {
     height: 1px;
     margin: 14px 0 8px;
@@ -905,7 +1008,7 @@ nav.navbar .navbar-brand,
 
         <div class="profile-contact-list">
 
-          <a class="profile-contact-item" href="mailto:lijesh@lsu.edu">
+          <div class="profile-contact-item email-contact-item">
 
             <span class="profile-contact-icon" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -914,17 +1017,32 @@ nav.navbar .navbar-brand,
               </svg>
             </span>
 
-            <span class="profile-contact-copy">
+            <a
+              class="email-contact-link"
+              href="mailto:lijesh@lsu.edu"
+              aria-label="Send an email to lijesh@lsu.edu"
+            >
               <strong>Email</strong>
               <span>lijesh@lsu.edu</span>
-            </span>
+            </a>
 
-          </a>
+            <button
+              class="copy-email-button"
+              type="button"
+              data-email="lijesh@lsu.edu"
+              aria-label="Copy lijesh@lsu.edu to clipboard"
+              title="Copy email address"
+            >
+              <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="9" y="9" width="11" height="11" rx="2"></rect>
+                <path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3"></path>
+              </svg>
+              <span class="copy-email-tooltip" aria-hidden="true">Copied!</span>
+            </button>
 
-          <a
-            class="profile-contact-item"
-            href="mailto:lijesh_mech@yahoo.co.in"
-          >
+          </div>
+
+          <div class="profile-contact-item email-contact-item">
 
             <span class="profile-contact-icon" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -933,12 +1051,30 @@ nav.navbar .navbar-brand,
               </svg>
             </span>
 
-            <span class="profile-contact-copy">
+            <a
+              class="email-contact-link"
+              href="mailto:lijesh_mech@yahoo.co.in"
+              aria-label="Send an email to lijesh_mech@yahoo.co.in"
+            >
               <strong>Secondary Email</strong>
               <span>lijesh_mech@yahoo.co.in</span>
-            </span>
+            </a>
 
-          </a>
+            <button
+              class="copy-email-button"
+              type="button"
+              data-email="lijesh_mech@yahoo.co.in"
+              aria-label="Copy lijesh_mech@yahoo.co.in to clipboard"
+              title="Copy email address"
+            >
+              <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="9" y="9" width="11" height="11" rx="2"></rect>
+                <path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3"></path>
+              </svg>
+              <span class="copy-email-tooltip" aria-hidden="true">Copied!</span>
+            </button>
+
+          </div>
 
           <a class="profile-contact-item" href="tel:+16465499651">
 
@@ -1528,6 +1664,75 @@ nav.navbar .navbar-brand,
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
+    const copyButtons = Array.from(document.querySelectorAll(".copy-email-button"));
+
+    function copyWithFallback(value) {
+      if (navigator.clipboard && window.isSecureContext) {
+        return navigator.clipboard.writeText(value);
+      }
+
+      return new Promise(function (resolve, reject) {
+        const textArea = document.createElement("textarea");
+        textArea.value = value;
+        textArea.setAttribute("readonly", "");
+        textArea.style.position = "fixed";
+        textArea.style.left = "-9999px";
+        textArea.style.opacity = "0";
+        document.body.appendChild(textArea);
+        textArea.select();
+
+        try {
+          const successful = document.execCommand("copy");
+          document.body.removeChild(textArea);
+          successful ? resolve() : reject(new Error("Copy command failed"));
+        } catch (error) {
+          document.body.removeChild(textArea);
+          reject(error);
+        }
+      });
+    }
+
+    copyButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        const email = button.getAttribute("data-email");
+
+        if (!email) {
+          return;
+        }
+
+        copyWithFallback(email).then(function () {
+          const icon = button.querySelector(".copy-icon");
+          const originalIcon = icon ? icon.outerHTML : "";
+
+          button.classList.add("copied");
+          button.setAttribute("title", "Copied!");
+          button.setAttribute("aria-label", email + " copied to clipboard");
+
+          if (icon) {
+            icon.outerHTML = `
+              <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m5 12 4 4L19 6"></path>
+              </svg>
+            `;
+          }
+
+          window.setTimeout(function () {
+            const currentIcon = button.querySelector(".copy-icon");
+
+            if (currentIcon && originalIcon) {
+              currentIcon.outerHTML = originalIcon;
+            }
+
+            button.classList.remove("copied");
+            button.setAttribute("title", "Copy email address");
+            button.setAttribute("aria-label", "Copy " + email + " to clipboard");
+          }, 1400);
+        }).catch(function () {
+          button.setAttribute("title", "Unable to copy automatically");
+        });
+      });
+    });
+
     const carousel = document.getElementById("poster-carousel");
 
     if (!carousel) {
