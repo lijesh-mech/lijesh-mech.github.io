@@ -5,7 +5,6 @@ permalink: /patents/battery-remaining-discharge/
 nav: false
 description: "A filed U.S. patent application concerning battery remaining-discharge assessment."
 ---
-
 <style>
 :root{
   --p:#461d7c;
