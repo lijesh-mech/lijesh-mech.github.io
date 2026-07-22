@@ -486,25 +486,19 @@ background:var(--gold);border-radius:999px;content:"";transform:translate(-50%,-
           <p class="journal">Additive Manufacturing (2018)</p>
 
           <div class="related-publication-actions">
-            <a
-              class="publication-button"
-              href="https://doi.org/10.1016/j.addma.2018.05.039"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View on Journal Website ↗
-            </a>
 
-            <a
-              class="publication-button"
-              href="{{ '/assets/pdf/patents/multi_material_smart_structure_pub.pdf' | relative_url }}"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View Publication PDF ↗
-            </a>
-          </div>
-        </article>
+    <a
+      class="publication-button"
+      href="https://doi.org/10.1016/j.addma.2018.05.039"
+      target="_blank"
+      rel="noopener noreferrer">
+
+      View on Journal Website ↗
+
+    </a>
+
+  </div>
+  </article>
       </section>
 
     </div>
