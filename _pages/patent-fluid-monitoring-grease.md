@@ -474,6 +474,14 @@ description: "Real-time monitoring technology for characterizing grease producti
         </h3>
         <p>Lijesh, K. P., and M. M. Khonsari</p>
         <p class="journal">Invention Disclosure 5 (2025): 100036</p>
+        <a
+          class="journal-link"
+          href="https://doi.org/10.1016/j.inv.2024.100036"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View on Journal Website ↗
+        </a>
       </article>
 
       <article class="pub">
