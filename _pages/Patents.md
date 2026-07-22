@@ -1,3 +1,12 @@
+---
+layout: page
+title: Patents
+permalink: /patents/
+nav: true
+nav_order: 5
+description: "Granted and filed patents of Dr. Lijesh Koottaparambil"
+---
+
 <style>
 :root{
   --purple:#461d7c;--purple-dark:#32105f;--purple-soft:#f6f2fb;
