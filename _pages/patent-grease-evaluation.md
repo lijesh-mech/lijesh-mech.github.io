@@ -5,7 +5,6 @@ permalink: /patents/grease-evaluation/
 nav: false
 description: "Evaluation of grease condition and performance using contact-angle-based measurements."
 ---
-
 <style>
 :root{
   --p:#461d7c;
@@ -106,16 +105,16 @@ description: "Evaluation of grease condition and performance using contact-angle
 }
 .number{
   color:var(--p);
-  font-size:15px;
+  font-size:17px;
   font-weight:900;
   text-transform:uppercase;
   letter-spacing:.055em;
 }
 .status{
-  min-width:94px;
-  padding:8px 14px;
+  min-width:112px;
+  padding:10px 18px;
   border-radius:999px;
-  font-size:13px;
+  font-size:15px;
   font-weight:900;
   text-align:center;
 }
@@ -229,10 +228,10 @@ description: "Evaluation of grease condition and performance using contact-angle
   display:inline-flex;
   margin-top:9px;
   padding:8px 11px;
-  background:#fff;
-  border:1px solid rgba(70,29,124,.3);
+  background:var(--p);
+  border:1px solid var(--p);
   border-radius:7px;
-  color:var(--p)!important;
+  color:#fff!important;
   font-size:11px;
   font-weight:760;
   text-decoration:none!important;
@@ -279,18 +278,18 @@ description: "Evaluation of grease condition and performance using contact-angle
 .journal-link{
   display:inline-flex;
   margin-top:9px;
-  padding:8px 11px;
-  background:#fff;
-  border:1px solid rgba(70,29,124,.3);
+  padding:9px 13px;
+  background:var(--p);
+  border:1px solid var(--p);
   border-radius:7px;
-  color:var(--p)!important;
+  color:#fff!important;
   font-size:11px;
   font-weight:760;
   text-decoration:none!important;
 }
 .journal-link:hover,
 .extension-link:hover{
-  background:var(--p);
+  background:var(--pd);
   color:#fff!important;
 }
 .modal{
@@ -480,10 +479,12 @@ description: "Evaluation of grease condition and performance using contact-angle
         </p>
 
         <a
-          class="extension-link"
-          href="{{ '/patents/food-evaluation/' | relative_url }}"
+        class="extension-link"
+        href="{{ '/assets/pdf/patents/peanut_butter_evaluation.pdf' | relative_url }}"
+        target="_blank"
+        rel="noopener noreferrer"
         >
-          View Extended Patent Details →
+        View Full Patent Document ↗
         </a>
 
       </div>
