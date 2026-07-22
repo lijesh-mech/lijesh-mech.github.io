@@ -454,7 +454,7 @@ description: "U.S. patent on thermodynamics-based damage assessment of tribo-sys
 
       <a
         class="damage-document-button"
-        href="{{ '/assets/pdf/patents/damage_assessment.pdf' | relative_url }}"
+        href="{{ '/assets/img/patents/damage_assessment.png' | relative_url }}"
         target="_blank"
         rel="noopener noreferrer"
       >
