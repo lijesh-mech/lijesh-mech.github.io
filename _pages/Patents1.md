@@ -2,7 +2,7 @@
 layout: page
 title: Patents
 permalink: /patents/
-nav: true
+nav: false
 nav_order: 5
 description: "Granted and filed patents of Dr. Lijesh Koottaparambil"
 ---
