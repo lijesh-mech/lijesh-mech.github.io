@@ -8,7 +8,194 @@ description: "Granted and filed patents of Dr. Lijesh Koottaparambil"
 ---
 
 <style>
-:root{--p:#461d7c;--pd:#32105f;--ps:#f6f2fb;--g:#fdd023;--t:#242433;--m:#666678;--b:#e1e1e8}
-.post,.post-content,.container{width:95%!important;max-width:1450px!important}.post-header>h1,.post-header>.post-description{display:none!important}.patent-wrap{width:100%;margin:34px auto 70px;color:var(--t)}.patent-hero{padding:30px 34px;background:linear-gradient(135deg,var(--p),var(--pd));border-radius:12px;color:#fff}.patent-hero h1{margin:0;color:#fff;font-size:clamp(32px,4vw,50px);font-weight:780}.patent-hero p{margin:8px 0 0;color:rgba(255,255,255,.84)}.section{margin-top:40px}.section-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:3px solid var(--p);margin-bottom:22px}.section-head h2{margin:0;color:var(--p);font-size:27px}.section-head p{margin:0;color:var(--m);font-size:13px}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.card{overflow:hidden;background:#fff;border:1px solid var(--b);border-radius:11px;box-shadow:0 6px 22px rgba(28,20,50,.06)}.card:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(28,20,50,.1)}.card-image{display:block;padding:14px;background:#f4f6fa;border-bottom:1px solid var(--b)}.card-image img{display:block;width:100%;height:auto;margin:0;border:1px solid #cfd4df;border-radius:8px}.card-body{padding:21px 22px 22px}.topline{display:flex;justify-content:space-between;gap:12px;margin-bottom:12px}.number{color:var(--p);font-size:12px;font-weight:820;text-transform:uppercase}.status{padding:6px 10px;border-radius:999px;font-size:11px;font-weight:820}.status.granted{background:#edf7ee;border:1px solid #cde8d0;color:#2e7d32}.status.filed{background:#fff7df;border:1px solid #f0d998;color:#9a6700}.card h3{margin:0 0 10px;font-size:21px}.card p{margin:0;color:var(--m);font-size:13px}.btn{display:inline-flex;margin-top:17px;padding:9px 13px;background:var(--p);border-radius:7px;color:#fff!important;font-size:12px;font-weight:750;text-decoration:none!important}.divider{position:relative;height:1px;margin:55px 0 8px;background:linear-gradient(to right,transparent,rgba(70,29,124,.42),transparent)}.divider:after{position:absolute;top:50%;left:50%;width:46px;height:5px;background:var(--g);border-radius:999px;content:"";transform:translate(-50%,-50%)}@media(max-width:950px){.cards{grid-template-columns:1fr}}@media(max-width:680px){.post,.post-content,.container{width:94%!important}.patent-hero{padding:24px 22px}}
+:root{
+  --p:#461d7c;
+  --pd:#32105f;
+  --t:#242433;
+  --m:#666678;
+  --b:#e1e1e8;
+}
+
+.post,
+.post-content,
+.container{
+  width:95%!important;
+  max-width:1250px!important;
+}
+
+.patents-wrap{
+  margin:34px auto 70px;
+  color:var(--t);
+}
+
+.patents-hero{
+  padding:30px 34px;
+  background:linear-gradient(135deg,var(--p),var(--pd));
+  border-radius:12px;
+  color:#fff;
+}
+
+.patents-hero h1{
+  margin:0;
+  color:#fff;
+  font-size:clamp(32px,4vw,50px);
+  font-weight:780;
+}
+
+.patents-hero p{
+  margin:10px 0 0;
+  color:rgba(255,255,255,.88);
+  font-size:14px;
+}
+
+.patent-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:26px;
+  margin-top:28px;
+}
+
+.patent-card{
+  overflow:hidden;
+  background:#fff;
+  border:1px solid var(--b);
+  border-radius:12px;
+  box-shadow:0 6px 22px rgba(28,20,50,.07);
+}
+
+.patent-image-link{
+  display:block;
+  padding:16px;
+  background:#f4f6fa;
+  border-bottom:1px solid var(--b);
+  text-decoration:none!important;
+}
+
+.patent-image-link img{
+  display:block;
+  width:100%;
+  height:auto;
+  margin:0;
+  background:#fff;
+  border:1px solid #cfd4df;
+  border-radius:8px;
+}
+
+.patent-content{
+  padding:22px;
+}
+
+.patent-topline{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin-bottom:12px;
+}
+
+.patent-number{
+  color:var(--p);
+  font-size:12px;
+  font-weight:820;
+  text-transform:uppercase;
+}
+
+.patent-status{
+  padding:6px 10px;
+  background:#edf7ee;
+  border:1px solid #cde8d0;
+  border-radius:999px;
+  color:#2e7d32;
+  font-size:11px;
+  font-weight:820;
+}
+
+.patent-title{
+  margin:0 0 12px;
+  font-size:clamp(22px,2.4vw,30px);
+}
+
+.patent-meta{
+  margin:0 0 18px;
+  color:var(--m);
+  font-size:13px;
+  line-height:1.65;
+}
+
+.patent-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:46px;
+  padding:10px 15px;
+  background:var(--p);
+  border-radius:8px;
+  color:#fff!important;
+  font-size:13px;
+  font-weight:760;
+  text-decoration:none!important;
+}
+
+@media(max-width:680px){
+  .post,
+  .post-content,
+  .container{
+    width:94%!important;
+  }
+
+  .patents-hero{
+    padding:24px 22px;
+  }
+}
 </style>
-<div class="patent-wrap"><header class="patent-hero"><h1>Patents</h1><p>Granted patents and filed patent applications.</p></header><section class="section"><div class="section-head"><h2>Granted Patents</h2><p>Select a patent to view details, documents, and related publications.</p></div><div class="cards"><article class="card"><a class="card-image" href="{{ '/patents/damage-assessment/' | relative_url }}"><img src="{{ '/assets/img/patents/damage_assessment.png' | relative_url }}" alt="Damage Assessment of Tribo-Systems"></a><div class="card-body"><div class="topline"><span class="number">US 11,488,420 B2</span><span class="status granted">Granted</span></div><h3>Damage Assessment of Tribo-Systems</h3><p>Thermodynamics-based assessment of degradation and damage in tribological systems.</p><a class="btn" href="{{ '/patents/damage-assessment/' | relative_url }}">View Patent Details →</a></div></article><article class="card"><a class="card-image" href="{{ '/patents/grease-evaluation/' | relative_url }}"><img src="{{ '/assets/img/patents/grease_evaluation.png' | relative_url }}" alt="Grease Evaluation Using Contact Angle"></a><div class="card-body"><div class="topline"><span class="number">US 2022/0074916</span><span class="status granted">Granted</span></div><h3>Grease Evaluation Using Contact Angle</h3><p>Evaluation of grease condition and performance using contact-angle-based measurements.</p><a class="btn" href="{{ '/patents/grease-evaluation/' | relative_url }}">View Patent Details →</a></div></article><article class="card"><a class="card-image" href="{{ '/patents/fluid-monitoring-grease/' | relative_url }}"><img src="{{ '/assets/img/patents/fluid_monitoring_grease.png' | relative_url }}" alt="Fluid Monitoring for Grease"></a><div class="card-body"><div class="topline"><span class="number">US 12,000,821 B2</span><span class="status granted">Granted</span></div><h3>Fluid Monitoring for Grease</h3><p>Real-time monitoring technology for characterizing grease production and condition.</p><a class="btn" href="{{ '/patents/fluid-monitoring-grease/' | relative_url }}">View Patent Details →</a></div></article><article class="card"><a class="card-image" href="{{ '/patents/multi-material-smart-structure/' | relative_url }}"><img src="{{ '/assets/img/patents/multi_material_smart_structure.png' | relative_url }}" alt="Multi Material Structure with Controllable Multi Directional Property"></a><div class="card-body"><div class="topline"><span class="number">Indian Patent No. 505929</span><span class="status granted">Granted</span></div><h3>Multi Material Structure with Controllable Multi Directional Property</h3><p>A multi-material smart structure designed to retain one property in one direction while achieving another in a second direction.</p><a class="btn" href="{{ '/patents/multi-material-smart-structure/' | relative_url }}">View Patent Details →</a></div></article></div></section><div class="divider"></div><section class="section"><div class="section-head"><h2>Filed Patents</h2><p>Patent applications currently filed.</p></div><div class="cards"><article class="card"><a class="card-image" href="{{ '/patents/battery-remaining-discharge/' | relative_url }}"><img src="{{ '/assets/img/patents/battery_remaining_discharge.jpg' | relative_url }}" alt="Battery Remaining Discharge"></a><div class="card-body"><div class="topline"><span class="number">Serial No. 63/827,104</span><span class="status filed">Filed</span></div><h3>Battery Remaining Discharge</h3><p>A filed U.S. patent application concerning battery remaining-discharge assessment.</p><a class="btn" href="{{ '/patents/battery-remaining-discharge/' | relative_url }}">View Patent Details →</a></div></article></div></section></div>
+
+<div class="patents-wrap">
+
+  <header class="patents-hero">
+    <h1>Patents</h1>
+    <p>Granted and filed intellectual-property developments.</p>
+  </header>
+
+  <section class="patent-grid">
+
+<article class="patent-card">
+
+  <a
+    class="patent-image-link"
+    href="{{ '/patents/damage-assessment/' | relative_url }}"
+    aria-label="Open Damage Assessment of Tribo-Systems"
+  >
+    <img
+      src="{{ '/assets/img/patents/damage_assessment.png' | relative_url }}"
+      alt="Damage Assessment of Tribo-Systems"
+    >
+  </a>
+
+  <div class="patent-content">
+
+    <div class="patent-topline">
+      <span class="patent-number">US 11,488,420 B2</span>
+      <span class="patent-status">Granted</span>
+    </div>
+
+    <h2 class="patent-title">Damage Assessment of Tribo-Systems</h2>
+
+    <p class="patent-meta">
+      Inventors: M. M. Khonsari and Lijesh K. P.<br>
+      United States · 2022
+    </p>
+
+    <a
+      class="patent-button"
+      href="{{ '/patents/damage-assessment/' | relative_url }}"
+    >
+      View Patent Details →
+    </a>
+
+  </div>
+
+</article>
+
+  </section>
+
+</div>
