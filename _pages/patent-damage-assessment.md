@@ -1,11 +1,3 @@
----
-layout: page
-title: Damage Assessment of Tribo-Systems
-permalink: /patents/damage-assessment/
-nav: false
-description: "U.S. patent on thermodynamics-based damage assessment of tribo-systems."
----
-
 <style>
 :root{
   --purple:#461d7c;--purple-dark:#32105f;--purple-soft:#f6f2fb;
