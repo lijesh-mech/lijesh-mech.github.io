@@ -1,0 +1,2088 @@
+---
+layout: about
+title: About
+permalink: /
+nav: false
+nav_order: 1
+---
+
+<style>
+  :root {
+    --profile-purple: #461d7c;
+    --profile-purple-dark: #32105f;
+    --profile-purple-light: #f6f2fb;
+    --profile-gold: #fdd023;
+    --profile-text: #242433;
+    --profile-muted: #5d5d6e;
+    --profile-border: #e1e1e8;
+    --profile-background: #ffffff;
+    --profile-panel: #fafafd;
+  }
+
+  /* Expand the homepage */
+  .post,
+  .post-content,
+  .container {
+    width: 96% !important;
+    max-width: 1500px !important;
+  }
+
+  /* Hide the default page heading */
+  .post-header > h1,
+  .post-header > .post-description {
+    display: none !important;
+  }
+
+  /*
+    Hide the site-title/brand that produces the first duplicate "About".
+    The navigation-menu About remains visible.
+  */
+  /* Hide the website brand/title that creates the first duplicate About */
+header .navbar-brand,
+header .navbar-brand *,
+nav.navbar .navbar-brand,
+.navbar-header .navbar-brand,
+.navbar .navbar-brand {
+  display: none !important;
+  }
+
+  /* Hide the standard al-folio footer */
+  footer.fixed-bottom,
+  footer.sticky-bottom {
+    display: none !important;
+  }
+
+  .academic-home {
+    width: 100%;
+    margin: 34px auto 0;
+    color: var(--profile-text);
+  }
+
+  .academic-grid {
+    display: grid;
+    grid-template-columns: 285px minmax(0, 1fr) 430px;
+    gap: 34px;
+    align-items: start;
+  }
+
+  /* =========================================================
+     LEFT PROFILE CARD
+     ========================================================= */
+
+  .profile-card {
+    overflow: hidden;
+    background: var(--profile-background);
+    border: 1px solid var(--profile-border);
+    border-top: 5px solid var(--profile-purple);
+    border-radius: 10px;
+    box-shadow: 0 6px 24px rgba(28, 20, 50, 0.08);
+  }
+
+  .profile-photo-wrapper {
+    padding: 14px 14px 12px;
+    background: #ffffff;
+  }
+
+  .profile-photo {
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0;
+    border-radius: 7px;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  /*
+    Purple contact section under the photograph
+  */
+  .profile-contact-panel {
+    padding: 19px 16px 18px;
+    background: var(--profile-purple);
+    color: #ffffff;
+  }
+
+  .profile-contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .profile-contact-item {
+    display: grid;
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 11px;
+    align-items: center;
+    min-height: 55px;
+    margin: 0;
+    padding: 9px 6px;
+    border-radius: 6px;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    transition:
+      background-color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .profile-contact-item:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateX(2px);
+  }
+
+  .profile-contact-icon,
+  .profile-social-icon {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 25px !important;
+    height: 25px !important;
+    min-width: 25px !important;
+    min-height: 25px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: var(--profile-gold) !important;
+    font-size: 12px;
+    line-height: 1;
+  }
+
+  .profile-contact-icon svg,
+  .profile-social-icon svg {
+    display: block !important;
+    width: 20px !important;
+    height: 20px !important;
+    max-width: 20px !important;
+    max-height: 20px !important;
+    margin: 0 !important;
+    fill: none !important;
+    stroke: currentColor !important;
+    stroke-width: 1.9 !important;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .profile-contact-copy {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+  }
+
+  .profile-contact-copy strong {
+    margin: 0;
+    color: #ffffff !important;
+    font-size: 12px;
+    font-weight: 750;
+    line-height: 1.3;
+  }
+
+  .profile-contact-copy span {
+    margin-top: 3px;
+    color: rgba(255, 255, 255, 0.82) !important;
+    font-size: 11px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+
+
+  /* Email address and copy-to-clipboard controls */
+  .email-contact-item {
+    grid-template-columns: 30px minmax(0, 1fr) 30px;
+  }
+
+  .email-contact-link {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    color: #ffffff !important;
+    text-decoration: none !important;
+  }
+
+  .email-contact-link strong {
+    margin: 0;
+    color: #ffffff !important;
+    font-size: 12px;
+    font-weight: 750;
+    line-height: 1.3;
+  }
+
+  .email-contact-link span {
+    margin-top: 3px;
+    color: rgba(255, 255, 255, 0.82) !important;
+    font-size: 11px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+
+  .copy-email-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    border-radius: 6px;
+    color: var(--profile-gold);
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .copy-email-button:hover,
+  .copy-email-button:focus-visible {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.58);
+    color: #ffffff;
+    outline: none;
+    transform: scale(1.06);
+  }
+
+  .copy-email-button svg {
+    display: block;
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .copy-email-button.copied {
+    background: rgba(255, 255, 255, 0.16);
+    border-color: rgba(255, 255, 255, 0.58);
+    color: #8ff0a4;
+  }
+
+  .copy-email-tooltip {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 8px);
+    z-index: 10;
+    padding: 5px 8px;
+    background: #ffffff;
+    border-radius: 5px;
+    color: var(--profile-purple-dark);
+    font-size: 10px;
+    font-weight: 750;
+    line-height: 1;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(3px);
+    transition:
+      opacity 0.18s ease,
+      transform 0.18s ease;
+  }
+
+  .copy-email-button.copied .copy-email-tooltip {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .profile-divider {
+    height: 1px;
+    margin: 14px 0 8px;
+    background: rgba(255, 255, 255, 0.27);
+  }
+
+  .profile-social-links {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  .profile-social-links a {
+    display: grid;
+    grid-template-columns: 30px minmax(0, 1fr) 17px;
+    gap: 10px;
+    align-items: center;
+    min-height: 49px;
+    margin: 0;
+    padding: 9px 6px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.21);
+    color: #ffffff !important;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.3;
+    text-decoration: none !important;
+    transition:
+      background-color 0.2s ease,
+      padding-left 0.2s ease;
+  }
+
+  .profile-social-links a:last-child {
+    border-bottom: 0;
+  }
+
+  .profile-social-links a:hover {
+    padding-left: 10px;
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--profile-gold) !important;
+  }
+
+  .profile-social-text-icon {
+    border: 1px solid var(--profile-gold);
+    border-radius: 3px;
+    color: var(--profile-gold) !important;
+    font-size: 12px !important;
+    font-weight: 800;
+  }
+
+  .profile-social-text-icon sup {
+    position: relative;
+    top: -0.25em;
+    font-size: 7px;
+  }
+
+  .profile-social-arrow {
+    color: var(--profile-gold);
+    font-size: 15px;
+    line-height: 1;
+    text-align: right;
+  }
+/* Keep professional-profile text visible on the purple background */
+.profile-social-links a,
+.profile-social-links a span {
+  color: #ffffff !important;
+}
+
+/* Keep the icons and arrows gold */
+.profile-social-links a .profile-social-icon,
+.profile-social-links a .profile-social-arrow {
+  color: var(--profile-gold) !important;
+}
+
+/* Keep the text white during hover */
+.profile-social-links a:hover,
+.profile-social-links a:hover span {
+  color: #ffffff !important;
+}
+
+/* Keep the icons gold during hover */
+.profile-social-links a:hover .profile-social-icon,
+.profile-social-links a:hover .profile-social-arrow {
+  color: var(--profile-gold) !important;
+}
+  /* =========================================================
+     CENTER PROFILE CONTENT
+     ========================================================= */
+
+  .biography-panel {
+    min-width: 0;
+    padding-top: 4px;
+  }
+
+  .main-name {
+    position: relative;
+    margin: 0 0 25px;
+    padding-bottom: 17px;
+    color: var(--profile-text);
+    font-size: clamp(32px, 3vw, 45px);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.08;
+  }
+
+  .main-name::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 62px;
+    height: 4px;
+    background: var(--profile-purple);
+    border-radius: 999px;
+    content: "";
+  }
+
+  /* Research Associate details */
+
+  .position-block {
+    margin-bottom: 21px;
+  }
+
+  .position-title {
+    margin: 0 0 7px;
+    color: var(--profile-purple);
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  .position-affiliation {
+    margin: 0;
+    color: #3f3f4e;
+    font-size: 14px;
+    font-weight: 550;
+    line-height: 1.65;
+  }
+
+  .position-affiliation strong {
+    color: var(--profile-text);
+    font-weight: 750;
+  }
+
+  /* Associate Editor and fellowship */
+
+  .professional-highlights {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(210px, 1fr));
+    gap: 12px;
+    margin: 25px 0 32px;
+  }
+
+  .highlight-card {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    min-height: 72px;
+    padding: 13px 15px;
+    background: var(--profile-panel);
+    border: 1px solid var(--profile-border);
+    border-radius: 8px;
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .highlight-card:hover {
+    background: var(--profile-purple-light);
+    border-color: rgba(70, 29, 124, 0.35);
+    transform: translateY(-2px);
+  }
+
+  .highlight-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 34px;
+    width: 34px;
+    height: 34px;
+    color: var(--profile-purple);
+  }
+
+  .highlight-icon svg {
+    display: block;
+    width: 26px;
+    height: 26px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .highlight-content {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+  }
+
+  .highlight-content strong {
+    color: var(--profile-text);
+    font-size: 13px;
+    font-weight: 750;
+    line-height: 1.35;
+  }
+
+  .highlight-content span {
+    margin-top: 3px;
+    color: var(--profile-muted);
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  /* =========================================================
+     MAIN SECTIONS
+     ========================================================= */
+
+  .content-section {
+    margin-top: 30px;
+    padding-top: 28px;
+    border-top: 1px solid var(--profile-border);
+  }
+
+  .section-heading {
+    display: flex;
+    gap: 11px;
+    align-items: center;
+    margin: 0 0 19px;
+    color: var(--profile-purple);
+    font-size: 23px;
+    font-weight: 700;
+  }
+
+  .section-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 27px;
+    width: 27px;
+    height: 27px;
+    color: var(--profile-purple);
+  }
+
+  .section-icon svg {
+    display: block;
+    width: 23px;
+    height: 23px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  /* Biographical Sketch */
+
+  .biography-copy p {
+    margin: 0 0 18px;
+    color: var(--profile-text);
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  /* Research Interests */
+
+  .research-chips {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(165px, 1fr));
+    gap: 11px;
+  }
+
+  .research-chip {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    min-height: 48px;
+    padding: 10px 13px;
+    background: var(--profile-panel);
+    border: 1px solid var(--profile-border);
+    border-radius: 8px;
+    color: var(--profile-text);
+    font-size: 13px;
+    font-weight: 650;
+    line-height: 1.3;
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .research-chip:hover {
+    background: var(--profile-purple-light);
+    border-color: rgba(70, 29, 124, 0.38);
+    transform: translateY(-2px);
+  }
+
+  .research-chip-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 21px;
+    width: 21px;
+    height: 21px;
+    color: var(--profile-purple);
+  }
+
+  .research-chip-icon svg {
+    display: block;
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  /* Selected Publications */
+
+  .selected-publications {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .publication-item {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 14px;
+    padding: 17px 0;
+    border-bottom: 1px solid var(--profile-border);
+  }
+
+  .publication-item:first-child {
+    padding-top: 4px;
+  }
+
+  .publication-number {
+    padding-top: 2px;
+    color: var(--profile-purple);
+    font-size: 13px;
+    font-weight: 750;
+  }
+
+  .publication-content h3 {
+    margin: 0 0 6px;
+    color: var(--profile-text);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.45;
+  }
+
+  .publication-content h3 a {
+    color: var(--profile-text) !important;
+    text-decoration: none !important;
+  }
+
+  .publication-content h3 a:hover {
+    color: var(--profile-purple) !important;
+    text-decoration: underline !important;
+    text-underline-offset: 3px;
+  }
+
+  .publication-authors {
+    margin: 0 0 4px;
+    color: var(--profile-muted);
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .publication-journal {
+    margin: 0;
+    color: var(--profile-purple);
+    font-size: 12px;
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  .publication-link {
+    display: inline-flex;
+    gap: 7px;
+    align-items: center;
+    margin-top: 18px;
+    color: var(--profile-purple) !important;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none !important;
+  }
+
+  /* =========================================================
+     ROTATING RESEARCH HIGHLIGHTS
+     ========================================================= */
+
+  .poster-card {
+    overflow: hidden;
+    width: 100%;
+    padding: 26px;
+    background: var(--profile-background);
+    border: 1px solid var(--profile-border);
+    border-radius: 10px;
+    box-shadow: 0 6px 24px rgba(28, 20, 50, 0.06);
+  }
+
+  .poster-card-header {
+    display: flex;
+    gap: 11px;
+    align-items: flex-start;
+    margin-bottom: 18px;
+  }
+
+  .poster-header-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 27px;
+    width: 27px;
+    height: 27px;
+    color: var(--profile-purple);
+  }
+
+  .poster-header-icon svg {
+    display: block;
+    width: 23px;
+    height: 23px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .poster-card-header h2 {
+    margin: 0;
+    color: var(--profile-purple);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .poster-card-header p {
+    margin: 4px 0 0;
+    color: var(--profile-muted);
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .poster-carousel {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: #f7f8fb;
+    border: 1px solid var(--profile-border);
+    border-radius: 8px;
+  }
+
+  .poster-slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    opacity: 0;
+    visibility: hidden;
+    text-decoration: none !important;
+    transition:
+      opacity 0.65s ease,
+      visibility 0.65s ease;
+  }
+
+  .poster-slide.active {
+    z-index: 2;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .poster-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .poster-control {
+    position: absolute;
+    top: 50%;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33px;
+    height: 33px;
+    padding: 0;
+    background: rgba(70, 29, 124, 0.84);
+    border: 0;
+    border-radius: 50%;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 17px;
+    line-height: 1;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition:
+      opacity 0.2s ease,
+      background-color 0.2s ease;
+  }
+
+  .poster-carousel:hover .poster-control,
+  .poster-control:focus-visible {
+    opacity: 1;
+  }
+
+  .poster-control:hover {
+    background: var(--profile-purple-dark);
+  }
+
+  .poster-previous {
+    left: 9px;
+  }
+
+  .poster-next {
+    right: 9px;
+  }
+
+  .poster-dots {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 13px;
+  }
+
+  .poster-dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    background: #d6cce4;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    transition:
+      width 0.2s ease,
+      background-color 0.2s ease;
+  }
+
+  .poster-dot.active {
+    width: 22px;
+    background: var(--profile-purple);
+    border-radius: 999px;
+  }
+
+  .poster-caption {
+    min-height: 38px;
+    margin: 12px 0 0;
+    color: var(--profile-text);
+    font-size: 13px;
+    font-weight: 650;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  /* =========================================================
+     CUSTOM FOOTER
+     ========================================================= */
+
+  .academic-footer {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+    margin-top: 58px;
+    padding: 24px 3%;
+    background: var(--profile-panel);
+    border-top: 1px solid var(--profile-border);
+  }
+
+  .footer-lsu {
+    display: flex;
+    gap: 17px;
+    align-items: center;
+  }
+
+  .lsu-wordmark {
+    color: var(--profile-purple);
+    font-size: 33px;
+    font-weight: 850;
+    letter-spacing: -0.07em;
+    line-height: 1;
+  }
+
+  .footer-affiliation,
+  .footer-copyright {
+    color: var(--profile-muted);
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+  .footer-copyright {
+    text-align: center;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 11px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .footer-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 39px;
+    height: 39px;
+    background: var(--profile-background);
+    border: 1px solid var(--profile-border);
+    border-radius: 50%;
+    color: var(--profile-purple) !important;
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none !important;
+  }
+
+  .footer-link svg {
+    display: block;
+    width: 19px;
+    height: 19px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .footer-rg sup {
+    position: relative;
+    top: -0.3em;
+    font-size: 7px;
+  }
+
+  /* =========================================================
+     RESPONSIVE DESIGN
+     ========================================================= */
+
+  @media screen and (max-width: 1320px) {
+    .academic-grid {
+      grid-template-columns: 260px minmax(0, 1fr);
+      gap: 32px;
+    }
+
+    .poster-card {
+      grid-column: 1 / -1;
+    }
+
+    .research-chips {
+      grid-template-columns: repeat(2, minmax(170px, 1fr));
+    }
+  }
+
+  @media screen and (max-width: 780px) {
+    .post,
+    .post-content,
+    .container {
+      width: 94% !important;
+    }
+
+    .academic-home {
+      margin-top: 20px;
+    }
+
+    .academic-grid {
+      display: block;
+    }
+
+    .profile-card,
+    .biography-panel,
+    .poster-card {
+      margin-bottom: 30px;
+    }
+
+    .main-name {
+      margin-top: 8px;
+      font-size: 34px;
+    }
+
+    .professional-highlights,
+    .research-chips {
+      grid-template-columns: 1fr;
+    }
+
+    .academic-footer {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .footer-lsu,
+    .footer-links {
+      justify-content: center;
+    }
+  }
+
+
+  /* =========================================================
+     DARK-MODE AND MOBILE CONTRAST FIX
+     ========================================================= */
+
+  html[data-theme="dark"] {
+    --profile-purple: #b894e8;
+    --profile-purple-dark: #d2b8f1;
+    --profile-purple-light: #31273d;
+    --profile-gold: #fdd023;
+    --profile-text: #f3f2f7;
+    --profile-muted: #c8c5d0;
+    --profile-border: #4a4652;
+    --profile-background: #202024;
+    --profile-panel: #29282e;
+  }
+
+  /* Support browsers or theme implementations that use a body class. */
+  body.dark,
+  body.dark-mode {
+    --profile-purple: #b894e8;
+    --profile-purple-dark: #d2b8f1;
+    --profile-purple-light: #31273d;
+    --profile-gold: #fdd023;
+    --profile-text: #f3f2f7;
+    --profile-muted: #c8c5d0;
+    --profile-border: #4a4652;
+    --profile-background: #202024;
+    --profile-panel: #29282e;
+  }
+
+  html[data-theme="dark"] .academic-home,
+  body.dark .academic-home,
+  body.dark-mode .academic-home {
+    color: var(--profile-text);
+  }
+
+  html[data-theme="dark"] .profile-card,
+  html[data-theme="dark"] .poster-card,
+  body.dark .profile-card,
+  body.dark .poster-card,
+  body.dark-mode .profile-card,
+  body.dark-mode .poster-card {
+    background: var(--profile-background);
+    border-color: var(--profile-border);
+  }
+
+  html[data-theme="dark"] .profile-photo-wrapper,
+  body.dark .profile-photo-wrapper,
+  body.dark-mode .profile-photo-wrapper {
+    background: #ffffff;
+  }
+
+  html[data-theme="dark"] .main-name,
+  html[data-theme="dark"] .position-affiliation,
+  html[data-theme="dark"] .position-affiliation strong,
+  html[data-theme="dark"] .biography-copy p,
+  html[data-theme="dark"] .highlight-content strong,
+  html[data-theme="dark"] .research-chip,
+  html[data-theme="dark"] .publication-content h3,
+  html[data-theme="dark"] .publication-content h3 a,
+  html[data-theme="dark"] .poster-caption,
+  body.dark .main-name,
+  body.dark .position-affiliation,
+  body.dark .position-affiliation strong,
+  body.dark .biography-copy p,
+  body.dark .highlight-content strong,
+  body.dark .research-chip,
+  body.dark .publication-content h3,
+  body.dark .publication-content h3 a,
+  body.dark .poster-caption,
+  body.dark-mode .main-name,
+  body.dark-mode .position-affiliation,
+  body.dark-mode .position-affiliation strong,
+  body.dark-mode .biography-copy p,
+  body.dark-mode .highlight-content strong,
+  body.dark-mode .research-chip,
+  body.dark-mode .publication-content h3,
+  body.dark-mode .publication-content h3 a,
+  body.dark-mode .poster-caption {
+    color: var(--profile-text) !important;
+  }
+
+  html[data-theme="dark"] .highlight-content span,
+  html[data-theme="dark"] .publication-authors,
+  html[data-theme="dark"] .poster-card-header p,
+  html[data-theme="dark"] .footer-affiliation,
+  html[data-theme="dark"] .footer-copyright,
+  body.dark .highlight-content span,
+  body.dark .publication-authors,
+  body.dark .poster-card-header p,
+  body.dark .footer-affiliation,
+  body.dark .footer-copyright,
+  body.dark-mode .highlight-content span,
+  body.dark-mode .publication-authors,
+  body.dark-mode .poster-card-header p,
+  body.dark-mode .footer-affiliation,
+  body.dark-mode .footer-copyright {
+    color: var(--profile-muted) !important;
+  }
+
+  html[data-theme="dark"] .position-title,
+  html[data-theme="dark"] .section-heading,
+  html[data-theme="dark"] .section-icon,
+  html[data-theme="dark"] .research-chip-icon,
+  html[data-theme="dark"] .publication-number,
+  html[data-theme="dark"] .publication-journal,
+  html[data-theme="dark"] .publication-link,
+  html[data-theme="dark"] .poster-card-header h2,
+  html[data-theme="dark"] .poster-header-icon,
+  html[data-theme="dark"] .lsu-wordmark,
+  body.dark .position-title,
+  body.dark .section-heading,
+  body.dark .section-icon,
+  body.dark .research-chip-icon,
+  body.dark .publication-number,
+  body.dark .publication-journal,
+  body.dark .publication-link,
+  body.dark .poster-card-header h2,
+  body.dark .poster-header-icon,
+  body.dark .lsu-wordmark,
+  body.dark-mode .position-title,
+  body.dark-mode .section-heading,
+  body.dark-mode .section-icon,
+  body.dark-mode .research-chip-icon,
+  body.dark-mode .publication-number,
+  body.dark-mode .publication-journal,
+  body.dark-mode .publication-link,
+  body.dark-mode .poster-card-header h2,
+  body.dark-mode .poster-header-icon,
+  body.dark-mode .lsu-wordmark {
+    color: var(--profile-purple) !important;
+  }
+
+  html[data-theme="dark"] .highlight-card,
+  html[data-theme="dark"] .research-chip,
+  html[data-theme="dark"] .academic-footer,
+  body.dark .highlight-card,
+  body.dark .research-chip,
+  body.dark .academic-footer,
+  body.dark-mode .highlight-card,
+  body.dark-mode .research-chip,
+  body.dark-mode .academic-footer {
+    background: var(--profile-panel);
+    border-color: var(--profile-border);
+  }
+
+  html[data-theme="dark"] .highlight-card:hover,
+  html[data-theme="dark"] .research-chip:hover,
+  body.dark .highlight-card:hover,
+  body.dark .research-chip:hover,
+  body.dark-mode .highlight-card:hover,
+  body.dark-mode .research-chip:hover {
+    background: var(--profile-purple-light);
+    border-color: rgba(184, 148, 232, 0.55);
+  }
+
+  html[data-theme="dark"] .content-section,
+  html[data-theme="dark"] .publication-item,
+  html[data-theme="dark"] .academic-footer,
+  body.dark .content-section,
+  body.dark .publication-item,
+  body.dark .academic-footer,
+  body.dark-mode .content-section,
+  body.dark-mode .publication-item,
+  body.dark-mode .academic-footer {
+    border-color: var(--profile-border);
+  }
+
+  html[data-theme="dark"] .poster-carousel,
+  body.dark .poster-carousel,
+  body.dark-mode .poster-carousel {
+    background: #17171b;
+    border-color: var(--profile-border);
+  }
+
+  html[data-theme="dark"] .footer-link,
+  body.dark .footer-link,
+  body.dark-mode .footer-link {
+    background: var(--profile-background);
+    border-color: var(--profile-border);
+    color: var(--profile-purple) !important;
+  }
+
+  /* Preserve the intended high-contrast purple contact panel. */
+  html[data-theme="dark"] .profile-contact-panel,
+  body.dark .profile-contact-panel,
+  body.dark-mode .profile-contact-panel {
+    background: #461d7c;
+  }
+
+  html[data-theme="dark"] .profile-contact-panel *,
+  body.dark .profile-contact-panel *,
+  body.dark-mode .profile-contact-panel * {
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+
+  html[data-theme="dark"] .profile-contact-copy strong,
+  html[data-theme="dark"] .email-contact-link strong,
+  html[data-theme="dark"] .profile-social-links a,
+  html[data-theme="dark"] .profile-social-links a span,
+  body.dark .profile-contact-copy strong,
+  body.dark .email-contact-link strong,
+  body.dark .profile-social-links a,
+  body.dark .profile-social-links a span,
+  body.dark-mode .profile-contact-copy strong,
+  body.dark-mode .email-contact-link strong,
+  body.dark-mode .profile-social-links a,
+  body.dark-mode .profile-social-links a span {
+    color: #ffffff !important;
+  }
+
+  html[data-theme="dark"] .profile-contact-copy span,
+  html[data-theme="dark"] .email-contact-link span,
+  body.dark .profile-contact-copy span,
+  body.dark .email-contact-link span,
+  body.dark-mode .profile-contact-copy span,
+  body.dark-mode .email-contact-link span {
+    color: rgba(255, 255, 255, 0.84) !important;
+  }
+
+  /* Improve readability on narrow mobile screens in both themes. */
+  @media screen and (max-width: 780px) {
+    .position-affiliation,
+    .biography-copy p {
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .highlight-content strong,
+    .research-chip,
+    .publication-content h3,
+    .poster-caption {
+      font-size: 14px;
+    }
+
+    .highlight-content span,
+    .publication-authors,
+    .publication-journal {
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .section-heading {
+      font-size: 23px;
+      line-height: 1.3;
+    }
+
+    .profile-card,
+    .poster-card {
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+    }
+  }
+
+</style>
+
+<div class="academic-home">
+
+  <div class="academic-grid">
+
+    <!-- LEFT PROFILE AND CONTACT CARD -->
+    <aside class="profile-card">
+
+      <div class="profile-photo-wrapper">
+        <img
+          src="{{ '/assets/img/lijesh_profile.jpg' | relative_url }}"
+          alt="Dr. Lijesh Koottaparambil"
+          class="profile-photo"
+        >
+      </div>
+
+      <div class="profile-contact-panel">
+
+        <div class="profile-contact-list">
+
+          <div class="profile-contact-item email-contact-item">
+
+            <span class="profile-contact-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                <path d="m4 7 8 6 8-6"></path>
+              </svg>
+            </span>
+
+            <a
+              class="email-contact-link"
+              href="mailto:lijesh@lsu.edu"
+              aria-label="Send an email to lijesh@lsu.edu"
+            >
+              <strong>Email</strong>
+              <span>lijesh@lsu.edu</span>
+            </a>
+
+            <button
+              class="copy-email-button"
+              type="button"
+              data-email="lijesh@lsu.edu"
+              aria-label="Copy lijesh@lsu.edu to clipboard"
+              title="Copy email address"
+            >
+              <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="9" y="9" width="11" height="11" rx="2"></rect>
+                <path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3"></path>
+              </svg>
+              <span class="copy-email-tooltip" aria-hidden="true">Copied!</span>
+            </button>
+
+          </div>
+
+          <div class="profile-contact-item email-contact-item">
+
+            <span class="profile-contact-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                <path d="m4 7 8 6 8-6"></path>
+              </svg>
+            </span>
+
+            <a
+              class="email-contact-link"
+              href="mailto:lijesh_mech@yahoo.co.in"
+              aria-label="Send an email to lijesh_mech@yahoo.co.in"
+            >
+              <strong>Secondary Email</strong>
+              <span>lijesh_mech@yahoo.co.in</span>
+            </a>
+
+            <button
+              class="copy-email-button"
+              type="button"
+              data-email="lijesh_mech@yahoo.co.in"
+              aria-label="Copy lijesh_mech@yahoo.co.in to clipboard"
+              title="Copy email address"
+            >
+              <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="9" y="9" width="11" height="11" rx="2"></rect>
+                <path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3"></path>
+              </svg>
+              <span class="copy-email-tooltip" aria-hidden="true">Copied!</span>
+            </button>
+
+          </div>
+
+          <a class="profile-contact-item" href="tel:+16465499651">
+
+            <span class="profile-contact-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M7 3h3l2 5-2 2a16 16 0 0 0 4 4l2-2 5 2v3a3 3 0 0 1-3 3C10 20 4 14 4 6a3 3 0 0 1 3-3z"></path>
+              </svg>
+            </span>
+
+            <span class="profile-contact-copy">
+              <strong>Phone</strong>
+              <span>(646) 549-9651</span>
+            </span>
+
+          </a>
+
+        </div>
+
+        <div class="profile-divider"></div>
+
+        <nav
+          class="profile-social-links"
+          aria-label="Professional profiles"
+        >
+
+          <a
+            href="https://scholar.google.com/citations?user=h7tDdkwAAAAJ"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <span class="profile-social-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="m3 9 9-5 9 5-9 5-9-5z"></path>
+                <path d="M7 12v5c3 2 7 2 10 0v-5"></path>
+              </svg>
+            </span>
+
+            <span>Google Scholar</span>
+            <span class="profile-social-arrow">→</span>
+
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/lijesh-koottaparambil-12270b95/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <span class="profile-social-icon profile-social-text-icon">
+              in
+            </span>
+
+            <span>LinkedIn</span>
+            <span class="profile-social-arrow">→</span>
+
+          </a>
+
+          <a
+            href="https://www.researchgate.net/profile/Lijesh-P-2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <span class="profile-social-icon profile-social-text-icon">
+              R<sup>G</sup>
+            </span>
+
+            <span>ResearchGate</span>
+            <span class="profile-social-arrow">→</span>
+
+          </a>
+
+        </nav>
+
+      </div>
+
+    </aside>
+
+    <!-- CENTER CONTENT -->
+    <section class="biography-panel">
+
+      <h1 class="main-name">Dr. Lijesh Koottaparambil</h1>
+
+      <div class="position-block">
+
+        <p class="position-title">Research Associate</p>
+
+        <p class="position-affiliation">
+          <strong>Center for Rotating Machinery (CeRoM)</strong><br>
+          <strong>Department of Mechanical &amp; Industrial Engineering</strong><br>
+          Louisiana State University, Baton Rouge, Louisiana, USA
+        </p>
+
+      </div>
+
+      <div class="professional-highlights">
+
+        <div class="highlight-card">
+
+          <span class="highlight-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M4 5a3 3 0 0 1 3-2h5v17H7a3 3 0 0 0-3 2z"></path>
+              <path d="M20 5a3 3 0 0 0-3-2h-5v17h5a3 3 0 0 1 3 2z"></path>
+            </svg>
+          </span>
+
+          <span class="highlight-content">
+            <strong>Associate Editor</strong>
+            <span>ASME Journal of Tribology</span>
+          </span>
+
+        </div>
+
+        <div class="highlight-card">
+
+          <span class="highlight-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="m3 9 9-5 9 5-9 5-9-5z"></path>
+              <path d="M7 12v5c3 2 7 2 10 0v-5"></path>
+            </svg>
+          </span>
+
+          <span class="highlight-content">
+            <strong>Indo-US Postdoctoral Fellow</strong>
+            <span>2018–2020</span>
+          </span>
+
+        </div>
+
+      </div>
+
+      <!-- BIOGRAPHICAL SKETCH -->
+      <section class="content-section">
+
+        <h2 class="section-heading">
+
+          <span class="section-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M4 5a3 3 0 0 1 3-2h5v17H7a3 3 0 0 0-3 2z"></path>
+              <path d="M20 5a3 3 0 0 0-3-2h-5v17h5a3 3 0 0 1 3 2z"></path>
+            </svg>
+          </span>
+
+          Biographical Sketch
+
+        </h2>
+
+        <div class="biography-copy">
+
+          <p>
+            Dr. Lijesh Koottaparambil is a Research Associate at the Center
+            for Rotating Machinery (CeRoM), Louisiana State University. His
+            research focuses on thermodynamics-based degradation assessment,
+            tribology, corrosion, additive manufacturing, hydrogen embrittlement,
+            food-process monitoring, battery diagnostics, and intelligent
+            manufacturing.
+          </p>
+
+          <p>
+            His work develops physics-informed methods and advanced sensing
+            technologies for evaluating material and system degradation,
+            predicting remaining useful life, and monitoring manufacturing
+            process quality. He has authored more than 110 peer-reviewed
+            publications, contributed to multiple U.S. and international
+            patents, and supports the scientific community through editorial
+            leadership, peer review, and interdisciplinary research
+            collaboration.
+          </p>
+
+        </div>
+
+      </section>
+
+      <!-- RESEARCH INTERESTS -->
+      <section class="content-section">
+
+        <h2 class="section-heading">
+
+          <span class="section-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M9 3h6"></path>
+              <path d="M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"></path>
+              <path d="M8 15h8"></path>
+            </svg>
+          </span>
+
+          Research Interests
+
+        </h2>
+
+        <div class="research-chips">
+
+          <div class="research-chip">
+            <span class="research-chip-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M9 3h6"></path>
+                <path d="M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"></path>
+                <path d="M8 15h8"></path>
+              </svg>
+            </span>
+            <span>Coupled Degradation Using Laws of Thermodynamics</span>
+          </div>
+
+          <div class="research-chip">
+            <span class="research-chip-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M10 13a5 5 0 0 0 7 0l2-2a5 5 0 0 0-7-7l-1 1"></path>
+                <path d="M14 11a5 5 0 0 0-7 0l-2 2a5 5 0 0 0 7 7l1-1"></path>
+              </svg>
+            </span>
+            <span>Tribology</span>
+          </div>
+
+          <div class="research-chip">
+            <span class="research-chip-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M7 3v5"></path>
+                <path d="M17 3v5"></path>
+                <path d="M5 8h14"></path>
+                <path d="M6 8v11h12V8"></path>
+                <path d="M9 12c1.2-1.2 2.1-1.2 3 0s1.8 1.2 3 0"></path>
+                <path d="M9 16c1.2-1.2 2.1-1.2 3 0s1.8 1.2 3 0"></path>
+              </svg>
+            </span>
+            <span>Corrosion</span>
+          </div>
+
+          <div class="research-chip">
+            <span class="research-chip-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="m12 3 8 4-8 4-8-4 8-4z"></path>
+                <path d="m4 12 8 4 8-4"></path>
+                <path d="m4 17 8 4 8-4"></path>
+              </svg>
+            </span>
+            <span>Additive Manufacturing</span>
+          </div>
+
+          <div class="research-chip">
+            <span class="research-chip-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M7 4v16"></path>
+                <path d="M17 4v16"></path>
+                <path d="M7 12h10"></path>
+              </svg>
+            </span>
+            <span>Hydrogen Embrittlement</span>
+          </div>
+
+          <div class="research-chip">
+            <span class="research-chip-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <rect x="4" y="4" width="6" height="6" rx="1"></rect>
+                <rect x="14" y="4" width="6" height="6" rx="1"></rect>
+                <rect x="4" y="14" width="6" height="6" rx="1"></rect>
+                <rect x="14" y="14" width="6" height="6" rx="1"></rect>
+                <path d="M10 7h4M7 10v4M17 10v4M10 17h4"></path>
+              </svg>
+            </span>
+            <span>Food Manufacturing</span>
+          </div>
+
+          <div class="research-chip">
+            <span class="research-chip-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <rect x="5" y="5" width="13" height="14" rx="2"></rect>
+                <path d="M18 9h2v6h-2"></path>
+                <path d="m12 8-3 5h3l-1 4 4-6h-3z"></path>
+              </svg>
+            </span>
+            <span>Battery Diagnostics</span>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- SELECTED PUBLICATIONS -->
+      <section class="content-section">
+
+        <h2 class="section-heading">
+
+          <span class="section-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M4 5a3 3 0 0 1 3-2h5v17H7a3 3 0 0 0-3 2z"></path>
+              <path d="M20 5a3 3 0 0 0-3-2h-5v17h5a3 3 0 0 1 3 2z"></path>
+            </svg>
+          </span>
+
+          Selected Publications
+
+        </h2>
+
+        <div class="selected-publications">
+
+          <article class="publication-item">
+            <div class="publication-number">01</div>
+            <div class="publication-content">
+              <h3>
+                <a href="https://doi.org/10.1016/j.newton.2025.100035"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  Entropy-Based Unified Theory of Failure Threshold of
+                  Degrading Systems
+                </a>
+              </h3>
+              <p class="publication-authors">
+                Koottaparambil, L., and M. M. Khonsari
+              </p>
+              <p class="publication-journal">
+                Newton 1, no. 3 (2025): 100035
+              </p>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <div class="publication-number">02</div>
+            <div class="publication-content">
+              <h3>
+                <a href="https://doi.org/10.1016/j.cej.2024.151306"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  Application of Thermodynamics to Industrial Grease Production
+                </a>
+              </h3>
+              <p class="publication-authors">
+                Lijesh, K. P., R. A. Miller, A. Sanford, J. Carroll, and
+                M. M. Khonsari
+              </p>
+              <p class="publication-journal">
+                Chemical Engineering Journal 489 (2024): 151306
+              </p>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <div class="publication-number">03</div>
+            <div class="publication-content">
+              <h3>
+                <a href="https://doi.org/10.1016/j.corsci.2024.112063"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  Experimentally Verified Thermodynamic Framework for Corrosion
+                </a>
+              </h3>
+              <p class="publication-authors">
+                Lijesh, K. P., A. Mahmoudi, and M. M. Khonsari
+              </p>
+              <p class="publication-journal">
+                Corrosion Science 233 (2024): 112063
+              </p>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <div class="publication-number">04</div>
+            <div class="publication-content">
+              <h3>
+                <a href="https://doi.org/10.1016/j.est.2024.110565"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  A Thermodynamic Approach for Characterizing the Degradation
+                  of Li-Ion Batteries
+                </a>
+              </h3>
+              <p class="publication-authors">
+                Lijesh, K. P., and M. M. Khonsari
+              </p>
+              <p class="publication-journal">
+                Journal of Energy Storage 82 (2024): 110565
+              </p>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <div class="publication-number">05</div>
+            <div class="publication-content">
+              <h3>
+                <a href="https://doi.org/10.1016/j.wear.2026.206694"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  Wear Maps Derived from Thermodynamic Principles
+                </a>
+              </h3>
+              <p class="publication-authors">
+                Lijesh, K. P., and M. M. Khonsari
+              </p>
+              <p class="publication-journal">
+                Wear 595 (2026): 206694
+              </p>
+            </div>
+          </article>
+
+          <article class="publication-item">
+            <div class="publication-number">06</div>
+            <div class="publication-content">
+              <h3>
+                <a href="https://doi.org/10.1016/j.ijhydene.2026.156097"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  Entropy-Based Quantification of Hydrogen Embrittlement
+                </a>
+              </h3>
+              <p class="publication-authors">
+                Lijesh, K. P., M. Khorasani, M. Rouhi Moghanlou, and
+                M. M. Khonsari
+              </p>
+              <p class="publication-journal">
+                International Journal of Hydrogen Energy 251 (2026): 156097
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+        <a class="publication-link"
+           href="{{ '/publications/' | relative_url }}">
+          View all publications
+          <span aria-hidden="true">→</span>
+        </a>
+
+      </section>
+
+    </section>
+
+    <!-- ROTATING RESEARCH HIGHLIGHTS -->
+    <aside class="poster-card">
+
+      <div class="poster-card-header">
+
+        <span class="poster-header-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+            <path d="M7 3v4M17 3v4M3 10h18"></path>
+          </svg>
+        </span>
+
+        <div>
+          <h2>Research Highlights</h2>
+          <p>Selected research posters and recent work</p>
+        </div>
+
+      </div>
+
+      <div
+        class="poster-carousel"
+        id="poster-carousel"
+        aria-label="Rotating research posters"
+      >
+
+        <a
+          class="poster-slide active"
+          href="{{ '/assets/img/he_poster.png' | relative_url }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open Entropy-Based Quantification of Hydrogen Embrittlement poster"
+        >
+          <img
+            src="{{ '/assets/img/he_poster.png' | relative_url }}"
+            alt="Entropy-Based Quantification of Hydrogen Embrittlement research poster"
+          >
+        </a>
+
+        <a
+          class="poster-slide"
+          href="{{ '/assets/img/encyclopedia_poster.png' | relative_url }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open Failure Threshold Entropy poster"
+        >
+          <img
+            src="{{ '/assets/img/encyclopedia_poster.png' | relative_url }}"
+            alt="Failure Threshold Entropy research poster"
+          >
+        </a>
+
+        <!--
+          To add another poster later, upload it to assets/img/news/
+          and duplicate one poster-slide block. Also add a matching
+          poster-dot button and caption in the JavaScript array below.
+        -->
+
+        <button
+          class="poster-control poster-previous"
+          type="button"
+          aria-label="Show previous poster"
+        >
+          &#10094;
+        </button>
+
+        <button
+          class="poster-control poster-next"
+          type="button"
+          aria-label="Show next poster"
+        >
+          &#10095;
+        </button>
+
+      </div>
+
+      <div class="poster-dots" aria-label="Select research poster">
+
+        <button
+          class="poster-dot active"
+          type="button"
+          aria-label="Show poster 1"
+        ></button>
+
+        <button
+          class="poster-dot"
+          type="button"
+          aria-label="Show poster 2"
+        ></button>
+
+      </div>
+
+      <p class="poster-caption" id="poster-caption">
+        Entropy-Based Quantification of Hydrogen Embrittlement
+      </p>
+
+    </aside>
+
+  </div>
+
+  <!-- CUSTOM FOOTER -->
+  <footer class="academic-footer">
+
+    <div class="footer-lsu">
+
+      <div class="lsu-wordmark">LSU</div>
+
+      <div class="footer-affiliation">
+        <strong>Center for Rotating Machinery (CeRoM)</strong><br>
+        Louisiana State University, Baton Rouge, Louisiana, USA
+      </div>
+
+    </div>
+
+    <div class="footer-copyright">
+      © 2026 Dr. Lijesh Koottaparambil.<br>
+      All rights reserved.
+    </div>
+
+    <div class="footer-links">
+
+      <a
+        class="footer-link"
+        href="https://scholar.google.com/citations?user=h7tDdkwAAAAJ"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Google Scholar"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 24 24"
+             aria-hidden="true">
+          <path d="m3 9 9-5 9 5-9 5-9-5z"></path>
+          <path d="M7 12v5c3 2 7 2 10 0v-5"></path>
+        </svg>
+      </a>
+
+      <a
+        class="footer-link"
+        href="https://www.linkedin.com/in/lijesh-koottaparambil-12270b95/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn"
+      >
+        in
+      </a>
+
+      <a
+        class="footer-link footer-rg"
+        href="https://www.researchgate.net/profile/Lijesh-P-2"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="ResearchGate"
+      >
+        R<sup>G</sup>
+      </a>
+
+    </div>
+
+  </footer>
+
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const copyButtons = Array.from(document.querySelectorAll(".copy-email-button"));
+
+    function copyWithFallback(value) {
+      if (navigator.clipboard && window.isSecureContext) {
+        return navigator.clipboard.writeText(value);
+      }
+
+      return new Promise(function (resolve, reject) {
+        const textArea = document.createElement("textarea");
+        textArea.value = value;
+        textArea.setAttribute("readonly", "");
+        textArea.style.position = "fixed";
+        textArea.style.left = "-9999px";
+        textArea.style.opacity = "0";
+        document.body.appendChild(textArea);
+        textArea.select();
+
+        try {
+          const successful = document.execCommand("copy");
+          document.body.removeChild(textArea);
+          successful ? resolve() : reject(new Error("Copy command failed"));
+        } catch (error) {
+          document.body.removeChild(textArea);
+          reject(error);
+        }
+      });
+    }
+
+    copyButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        const email = button.getAttribute("data-email");
+
+        if (!email) {
+          return;
+        }
+
+        copyWithFallback(email).then(function () {
+          const icon = button.querySelector(".copy-icon");
+          const originalIcon = icon ? icon.outerHTML : "";
+
+          button.classList.add("copied");
+          button.setAttribute("title", "Copied!");
+          button.setAttribute("aria-label", email + " copied to clipboard");
+
+          if (icon) {
+            icon.outerHTML = `
+              <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m5 12 4 4L19 6"></path>
+              </svg>
+            `;
+          }
+
+          window.setTimeout(function () {
+            const currentIcon = button.querySelector(".copy-icon");
+
+            if (currentIcon && originalIcon) {
+              currentIcon.outerHTML = originalIcon;
+            }
+
+            button.classList.remove("copied");
+            button.setAttribute("title", "Copy email address");
+            button.setAttribute("aria-label", "Copy " + email + " to clipboard");
+          }, 1400);
+        }).catch(function () {
+          button.setAttribute("title", "Unable to copy automatically");
+        });
+      });
+    });
+
+    const carousel = document.getElementById("poster-carousel");
+
+    if (!carousel) {
+      return;
+    }
+
+    const slides = Array.from(carousel.querySelectorAll(".poster-slide"));
+    const dots = Array.from(document.querySelectorAll(".poster-dot"));
+    const previousButton = carousel.querySelector(".poster-previous");
+    const nextButton = carousel.querySelector(".poster-next");
+    const caption = document.getElementById("poster-caption");
+
+    const captions = [
+      "Entropy-Based Quantification of Hydrogen Embrittlement",
+      "Failure Threshold Entropy: A Universal Thermodynamic Framework for Predicting Wear"
+    ];
+
+    let currentIndex = 0;
+    let intervalId = null;
+    const rotationTime = 3000;
+
+    function showSlide(index) {
+      currentIndex = (index + slides.length) % slides.length;
+
+      slides.forEach(function (slide, slideIndex) {
+        const isActive = slideIndex === currentIndex;
+        slide.classList.toggle("active", isActive);
+        slide.setAttribute("aria-hidden", String(!isActive));
+      });
+
+      dots.forEach(function (dot, dotIndex) {
+        dot.classList.toggle("active", dotIndex === currentIndex);
+        dot.setAttribute("aria-current", dotIndex === currentIndex ? "true" : "false");
+      });
+
+      if (caption && captions[currentIndex]) {
+        caption.textContent = captions[currentIndex];
+      }
+    }
+
+    function showNextSlide() {
+      showSlide(currentIndex + 1);
+    }
+
+    function showPreviousSlide() {
+      showSlide(currentIndex - 1);
+    }
+
+    function stopRotation() {
+      if (intervalId !== null) {
+        window.clearInterval(intervalId);
+        intervalId = null;
+      }
+    }
+
+    function startRotation() {
+      stopRotation();
+      intervalId = window.setInterval(showNextSlide, rotationTime);
+    }
+
+    if (nextButton) {
+      nextButton.addEventListener("click", function () {
+        showNextSlide();
+        startRotation();
+      });
+    }
+
+    if (previousButton) {
+      previousButton.addEventListener("click", function () {
+        showPreviousSlide();
+        startRotation();
+      });
+    }
+
+    dots.forEach(function (dot, index) {
+      dot.addEventListener("click", function () {
+        showSlide(index);
+        startRotation();
+      });
+    });
+
+    carousel.addEventListener("mouseenter", stopRotation);
+    carousel.addEventListener("mouseleave", startRotation);
+    carousel.addEventListener("focusin", stopRotation);
+    carousel.addEventListener("focusout", startRotation);
+
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) {
+        stopRotation();
+      } else {
+        startRotation();
+      }
+    });
+
+    showSlide(0);
+    startRotation();
+  });
+</script>
