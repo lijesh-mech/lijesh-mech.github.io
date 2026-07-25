@@ -383,7 +383,7 @@ body.dark-mode .topic-action.disabled{
     <div class="topic-copy">
       <span class="topic-number">AREA 02</span>
 
-      <h2>Tribology and Wear</h2>
+      <h2>Tribology</h2>
 
       <p>
         Investigates friction, lubrication, abrasive and adhesive wear, fretting,
@@ -405,7 +405,7 @@ body.dark-mode .topic-action.disabled{
     <div class="topic-image">
       <div class="placeholder">
         <div>
-          <strong>Tribology and Wear</strong>
+          <strong>Tribology</strong>
           <span>Representative research image will be added here.</span>
         </div>
       </div>
